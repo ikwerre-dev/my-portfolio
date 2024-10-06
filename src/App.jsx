@@ -32,11 +32,10 @@ function App() {
 
     requestAnimationFrame(raf);
 
-    // Simulating content loading
-    window.addEventListener('load', () => {
+     window.addEventListener('load', () => {
       setTimeout(() => {
         setLoading(false);
-      }, 1000); // Adjust this delay as needed
+      }, 1000);  
     });
 
     return () => {

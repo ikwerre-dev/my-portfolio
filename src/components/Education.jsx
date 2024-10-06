@@ -14,7 +14,7 @@ const educations = [
     location: "Dubai, UAE",
     flag: "AE"
   },
- 
+
 ];
 
 const EducationCard = ({ text, author, location, flag }) => (
@@ -27,16 +27,12 @@ const EducationCard = ({ text, author, location, flag }) => (
       <div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-0">
           <div
-            className={` bg-stone-950 font-sora w-full md:w-auto text-purple-500 px-4 py-2 rounded-full md:text-lg font-semibold flex gap-2 items-center `}
-
-          >
+            className={` bg-stone-950 font-sora w-full md:w-auto text-purple-500 px-4 py-2 rounded-full md:text-lg font-semibold flex gap-2 items-center `}>
             <Calendar /><span> 2022 to 2024</span>
           </div>
 
           <div
-            className={` bg-white font-sora w-full md:w-auto mt-5 md:mt-0 text-yellow-950 px-4 py-2 rounded-full md:text-lg font-semibold flex items-center `}
-
-          >
+            className={` bg-white font-sora w-full md:w-auto mt-5 md:mt-0 text-yellow-950 px-4 py-2 rounded-full md:text-lg font-semibold flex items-center `}>
             PRIMARY
           </div>
 
