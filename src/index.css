@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root{
+  background-color: black;
+}
+.font-sora {
+  font-family: "Sora";
+
+}
+
+.font-luckiest-guy {
+  font-family: 'Luckiest Guy', system-ui;
+
+}
+
+.font-gluten {
+  font-family: 'Gluten Variable', system-ui;
+
+}
+
+.font-coda {
+  font-family: 'Coda Caption', sans-serif;
+
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+
+}
