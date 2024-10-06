@@ -32,15 +32,30 @@ function App() {
 
     requestAnimationFrame(raf);
 
-     window.addEventListener('load', () => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);  
-    });
+    // Improved loading detection
+    const handleLoading = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoading();
+    } else {
+      window.addEventListener('load', handleLoading);
+    }
 
     return () => {
       lenis.destroy();
+      window.removeEventListener('load', handleLoading);
     };
+  }, []);
+
+  // Fallback to hide loader after a maximum time
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000); // 5 seconds maximum loading time
+
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
