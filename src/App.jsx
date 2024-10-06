@@ -2,6 +2,10 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import AnimatedCursor from "react-animated-cursor"
 import AboutMe from "./components/About";
+import Testimonials from "./components/Testimonials";
+import Educations from "./components/Education";
+import Experiences from "./components/Experience";
+import Works from "./components/Works";
 
 function App() {
   return (
@@ -41,6 +45,10 @@ function App() {
       <Header />
       <Banner />
       <AboutMe />
+      <Testimonials />
+      <Experiences />
+      <Educations />
+      <Works />
     </div>
   );
 }

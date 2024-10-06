@@ -12,10 +12,10 @@ import reactjs from '../assets/icons/reactjs.png';
 
 const SkillTag = ({ skill, style }) => (
     <div
-        className={`absolute bg-white text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center transform -translate-y-1/2`}
+        className={`absolute bg-white text-black px-2 md:px-4 py-1 md:py-2 rounded-full text-xs font-semibold flex items-center transform -translate-y-1/2`}
         style={{ ...style, ...parseInlineStyle(skill.class) }} // Merge additional class styles
     >
-        {skill.icon && <img src={skill.icon} alt={skill.name} className="w-12 h-12 mr-2" />}
+        {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 md:w-12 h-5 md:h-12 mr-2" />}
         {skill.name}
     </div>
 );
@@ -58,31 +58,32 @@ const Banner = () => {
 
 
     return (
-        <div className="banner relative bg-black text-white h-[53rem] py-16 px-6 overflow-hidden">
+        <div className="banner relative bg-black text-white h-[33rem]   md:h-[53rem] py-16 px-6 overflow-hidden">
             <div className="absolute inset-0 z-0">
-                <img src={BannerImage2} alt="Background" className="w-full h-full object-contain opacity-40 animate-barrel-roll-x mt-[8rem]" />
+                <img src={BannerImage2} alt="Background" className="w-full h-full object-cover md:object-contain opacity-30 md:opacity-35 animate-barrel-roll-x mt-[3rem] md:mt-[8rem]" />
             </div>
-            <div className="relative z-10 flex flex-col items-center mt-5 max-w-5xl mx-auto">
-                <h1 className="text-[4rem] font-bold font-gluten mb-4 bg-purple-400 px-5 rounded rounded-[3rem]  border-purple-900 border-4">
+            <div className="relative z-10 flex flex-col items-center md:mt-5  md:pt-0 max-w-5xl mx-auto">
+                <h1 className="text-[1.5rem] md:text-[4rem] font-bold font-gluten mb-4 bg-purple-400 px-5 rounded rounded-[3rem]  border-purple-900 border-4">
                     I'm <span className="text-purple-700">Robinson Honour</span>
                 </h1>
-                <p className="text-2xl mb-6 font-sora my-3">
-                    A Software Developer | Robotics Engineer
-                    <span className="ml-4 bg-purple-500 text-black px-3 py-1 rounded-full text-sm">
+                <p className="text-lg md:text-2xl mb-6 text-center font-sora my-5 md:my-3 ">
+                    <span>                    A Software Developer | Robotics Engineer with
+                    </span>
+                    <span className="ml-2 md:ml-4 bg-purple-500 text-black px-3 py-1 rounded-full text-sm">
                         7.5+ Years Experience
                     </span>
                 </p>
-                <div className="flex space-x-4 my-3">
-                    <button className="bg-transparent border border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-black px-7 text-l py-3 rounded-full flex items-center">
+                <div className="hidden md:flex space-x-4 my-2 md:my-3">
+                    <button className="bg-transparent border border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-black px-4 md:px-7 text-l py-2 md:py-3 rounded-full flex items-center">
                         <Download className="w-4 h-4 mr-2" />
                         Resume
                     </button>
-                    <button className="border border-purple-500 bg-purple-500 text-black hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500  px-7 text-l py-3 rounded-full">
+                    <button className="border border-purple-500 bg-purple-500 text-black hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500  px-4 md:px-7  text-l py-3 rounded-full">
                         Hire Me
                     </button>
                 </div>
-                <div className="relative">
-                    <img src={BannerMe} className='w-3/4 mx-auto mt-5' alt="Robinson Honour" />
+                <div className="relative  mt-[5rem] md:mt-0 ">
+                    <img src={BannerMe} className='md:w-3/4 mx-auto mt-5' alt="Robinson Honour" />
                     {leftSkillsWithPositions.map((skill) => (
                         <SkillTag key={skill.name} skill={skill} style={skill.style} />
                     ))}
