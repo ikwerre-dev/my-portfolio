@@ -26,16 +26,16 @@ const AboutMe = () => {
                             <h2 className="text-4xl md:text-5xl font-bold text-purple-400 mt-1 font-gluten">I Love</h2>
                         </div>
 
-                        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-5 gap-y-7 mb-12 ">
+                        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-4 md:gap-5 gap-y-7 mb-12 ">
                             {[
                                 { icon: <Headphones className="w-6 h-6" />, text: "Music", color: "text-[#7B3F00] font-sora" },
                                 { icon: <Car className="w-6 h-6" />, text: "Travelling", color: "text-[#7B3F00] font-sora" },
                                 { icon: <FaSwimmingPool className="w-6 h-6" />, text: "Swimming", color: "text-[#7B3F00] font-sora" },
                                 { icon: <DollarSign className="w-6 h-6" />, text: "Money", color: "text-[#7B3F00] font-sora" },
                             ].map((item, index) => (
-                                <div key={index} className={`flex items-center bg-purple-100 rounded-full py-5 px-5 md:px-10 ${item.color}`}>
+                                <div key={index} className={`flex flex-row justify-start items-center bg-purple-100 rounded-full py-5 px-5 md:px-10 ${item.color}`}>
                                     <span>{item.icon}</span>
-                                    <span className="ml-2 text-lg md:text-2xl  ">{item.text}</span>
+                                    <span className="ml-2 text-[1rem] font-sora md:text-2xl  ">{item.text}</span>
                                 </div>
                             ))}
                         </div>
