@@ -36,7 +36,7 @@ const Banner = () => {
     const controls = useAnimation();
 
     useEffect(() => {
-        controls.start({opacity: 1, transition: { duration: 1, ease: "easeOut" } });
+        controls.start({opacity: 1, transition: { duration: 5, ease: "easeOut" } });
     }, [controls]);
 
     const skills = [
@@ -89,7 +89,7 @@ const Banner = () => {
                     </button>
                 </div>
                 <motion.div 
-                    className="relative w-[98vw] md:w-auto"
+                    className="opacity-0 relative w-[98vw] md:w-auto"
                     initial={{ opacity: 0 }}
                     animate={controls}
                 >
