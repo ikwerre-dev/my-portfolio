@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Lenis from 'lenis';
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -8,12 +8,16 @@ import Testimonials from "./components/Testimonials";
 import Educations from "./components/Education";
 import Experiences from "./components/Experience";
 import Works from "./components/Works";
+import { Flame } from 'lucide-react';
+import { ImSpoonKnife } from 'react-icons/im';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: .5,
-      easing: (t) => t,  // Linear easing for consistent speed
+      easing: (t) => t,  
       smooth: true,
       direction: 'vertical',
       gestureDirection: 'vertical',
@@ -28,10 +32,27 @@ function App() {
 
     requestAnimationFrame(raf);
 
+    // Simulating content loading
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000); // Adjust this delay as needed
+    });
+
     return () => {
       lenis.destroy();
     };
   }, []);
+
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+        <p><Flame size={25} className='mt-[-.5rem]' />  Hold on, Uncle Honour is Cooking<ImSpoonKnife /></p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-black">
       <AnimatedCursor
