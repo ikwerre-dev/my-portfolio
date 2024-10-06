@@ -36,7 +36,7 @@ const Banner = () => {
     const controls = useAnimation();
 
     useEffect(() => {
-        controls.start({opacity: 1, transition: { duration: 5, ease: "easeOut" } });
+        controls.start({opacity: 1, transition: { duration: 1.5, ease: "easeOut" } });
     }, [controls]);
 
     const skills = [
