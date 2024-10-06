@@ -41,12 +41,12 @@ const AboutMe = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mb-12 md:w-1/2">
+                    <div className="grid grid-cols-2 md:grid-cols-2 gap-5 md:gap-8 mb-12 md:w-1/2">
                         {[
                             { number: "7.5+", text: "Years Experience" },
                             { number: "20+", text: "Project Completed" },
                         ].map((item, index) => (
-                            <div key={index} className="bg-purple-900 bg-opacity-20 flex flex-col align-center justify-center items-center rounded-[3rem] p-8 text-center">
+                            <div key={index} className="bg-purple-900 bg-opacity-20 flex flex-col align-center justify-center items-center rounded-[3rem] p-10 md:p-8 text-center">
                                 <h3 className="text-5xl md:text-6xl font-bold text-purple-400 mb-2 font-gluten">{item.number}</h3>
                                 <p className="text-xl md:text-2xl font-sora">{item.text}</p>
                             </div>
