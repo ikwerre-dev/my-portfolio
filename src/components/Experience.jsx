@@ -66,7 +66,7 @@ const ExperiencesCard = ({ text, author, location, flag }) => (
 
 const Experiences = () => {
   return (
-    <div className="bg-black my-[5rem]   p-12 flex flex-col items-center justify-center">
+    <div className="bg-black my-[5rem]  p-8     md:p-12 flex flex-col items-center justify-center">
       <h2 className="text-4xl md:text-6xl font-bold mb-12 text-purple-400 relative">
         Experiences
         <span className="absolute -top-4 -left-7 text-purple-400/20 text-5xl md:text-7xl">Experiences</span>
