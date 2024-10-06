@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { Download } from 'lucide-react';
 import BannerImage from '../assets/bg-vector.svg';
 import BannerImage2 from '../assets/home-bg.png';
@@ -13,12 +14,13 @@ import reactjs from '../assets/icons/reactjs.png';
 const SkillTag = ({ skill, style }) => (
     <div
         className={`absolute bg-white text-black px-2 md:px-4 py-1 md:py-2 rounded-full text-xs font-semibold flex items-center transform -translate-y-1/2`}
-        style={{ ...style, ...parseInlineStyle(skill.class) }} // Merge additional class styles
+        style={{ ...style, ...parseInlineStyle(skill.class) }}
     >
         {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 md:w-12 h-5 md:h-12 mr-2" />}
         {skill.name}
     </div>
 );
+
 const parseInlineStyle = (styleString) => {
     if (!styleString) return {};
     return styleString.split(';').reduce((styles, style) => {
@@ -31,6 +33,12 @@ const parseInlineStyle = (styleString) => {
 };
 
 const Banner = () => {
+    const controls = useAnimation();
+
+    useEffect(() => {
+        controls.start({opacity: 1, transition: { duration: 1, ease: "easeOut" } });
+    }, [controls]);
+
     const skills = [
         { name: 'NextJS', icon: nextjs, class: '' },
         { name: 'Tailwind CSS', icon: tailwind, class: 'left:0%' },
@@ -56,19 +64,17 @@ const Banner = () => {
     const leftSkillsWithPositions = getSkillPositions(leftSkills, true);
     const rightSkillsWithPositions = getSkillPositions(rightSkills, false);
 
-
     return (
-        <div className="banner relative bg-black text-white h-[32rem]   md:h-[53rem] py-16 px-6 overflow-hidden">
+        <div className="banner relative bg-black text-white h-[32rem] md:h-[53rem] py-16 px-6 overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img src={BannerImage2} alt="Background" className="w-full h-full object-cover md:object-contain opacity-30 md:opacity-35 animate-barrel-roll-x mt-[3rem] md:mt-[8rem]" />
             </div>
             <div className="relative z-10 flex flex-col items-center mt-5 pt-5 md:pt-0 max-w-5xl mx-auto">
-                <h1 className="text-[1.5rem] md:text-[4rem] font-bold font-gluten mb-4 px-8 rounded rounded-[3rem]  border-purple-900 border-2 md:border-4">
+                <h1 className="text-[1.5rem] md:text-[4rem] font-bold font-gluten mb-4 px-8 rounded rounded-[3rem] border-purple-900 border-2 md:border-4">
                     I'm <span className="text-purple-700">Robinson Honour</span>
                 </h1>
                 <p className="text-lg md:text-2xl mb-6 text-center font-sora my-5 md:my-3 ">
-                    <span>                    A Software Developer | Robotics Engineer with
-                    </span>
+                    <span>A Software Developer | Robotics Engineer with</span>
                     <span className="ml-2 md:ml-4 bg-purple-500 text-black px-3 py-1 rounded-full text-sm">
                         7.5+ Years Experience
                     </span>
@@ -78,19 +84,23 @@ const Banner = () => {
                         <Download className="w-4 h-4 mr-2" />
                         Resume
                     </button>
-                    <button className="border border-purple-500 bg-purple-500 text-black hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500  px-4 md:px-7  text-l py-3 rounded-full">
+                    <button className="border border-purple-500 bg-purple-500 text-black hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500 px-4 md:px-7 text-l py-3 rounded-full">
                         Hire Me
                     </button>
                 </div>
-                <div className="relative w-[98vw] md:w-auto">
-                    <img src={BannerMe} className='w-[55rem] md:w-3/4  mx-auto mt-5' alt="Robinson Honour" />
+                <motion.div 
+                    className="relative w-[98vw] md:w-auto"
+                    initial={{ opacity: 0 }}
+                    animate={controls}
+                >
+                    <img src={BannerMe} className='w-[55rem] md:w-3/4 mx-auto mt-5' alt="Robinson Honour" />
                     {leftSkillsWithPositions.map((skill) => (
                         <SkillTag key={skill.name} skill={skill} style={skill.style} />
                     ))}
                     {rightSkillsWithPositions.map((skill) => (
                         <SkillTag key={skill.name} skill={skill} style={skill.style} />
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     );
