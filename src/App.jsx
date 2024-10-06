@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import Lenis from 'lenis';
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import AnimatedCursor from "react-animated-cursor"
@@ -8,6 +10,28 @@ import Experiences from "./components/Experience";
 import Works from "./components/Works";
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: .5,
+      easing: (t) => t,  // Linear easing for consistent speed
+      smooth: true,
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smoothTouch: true,
+      touchMultiplier: 1.5,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-black">
       <AnimatedCursor

@@ -17,6 +17,7 @@
     "@fontsource/sora": "^5.1.0",
     "autoprefixer": "^10.4.20",
     "devicon": "^2.16.0",
+    "lenis": "^1.1.13",
     "lucide-react": "^0.447.0",
     "postcss": "^8.4.47",
     "react": "^18.3.1",

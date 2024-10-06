@@ -58,12 +58,12 @@ const Banner = () => {
 
 
     return (
-        <div className="banner relative bg-black text-white h-[33rem]   md:h-[53rem] py-16 px-6 overflow-hidden">
+        <div className="banner relative bg-black text-white h-[32rem]   md:h-[53rem] py-16 px-6 overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img src={BannerImage2} alt="Background" className="w-full h-full object-cover md:object-contain opacity-30 md:opacity-35 animate-barrel-roll-x mt-[3rem] md:mt-[8rem]" />
             </div>
-            <div className="relative z-10 flex flex-col items-center md:mt-5  md:pt-0 max-w-5xl mx-auto">
-                <h1 className="text-[1.5rem] md:text-[4rem] font-bold font-gluten mb-4 bg-purple-400 px-5 rounded rounded-[3rem]  border-purple-900 border-4">
+            <div className="relative z-10 flex flex-col items-center mt-5 pt-5 md:pt-0 max-w-5xl mx-auto">
+                <h1 className="text-[1.5rem] md:text-[4rem] font-bold font-gluten mb-4 md:bg-purple-400 px-5 rounded rounded-[3rem]  border-purple-900 border-2 md:border-4">
                     I'm <span className="text-purple-700">Robinson Honour</span>
                 </h1>
                 <p className="text-lg md:text-2xl mb-6 text-center font-sora my-5 md:my-3 ">
@@ -82,7 +82,7 @@ const Banner = () => {
                         Hire Me
                     </button>
                 </div>
-                <div className="relative  mt-[5rem] md:mt-0 ">
+                <div className="relative   ">
                     <img src={BannerMe} className='md:w-3/4 mx-auto mt-5' alt="Robinson Honour" />
                     {leftSkillsWithPositions.map((skill) => (
                         <SkillTag key={skill.name} skill={skill} style={skill.style} />
