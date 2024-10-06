@@ -69,7 +69,7 @@ const CricTrackerCard = ({color}) => {
 
 const Works = () => {
   return (
-    <div className="bg-black my-[5rem]  p-12 flex flex-col items-center justify-center">
+    <div className="bg-black my-[5rem] p-8 md:p-12 flex flex-col items-center justify-center">
       <h2 className="text-4xl md:text-6xl font-bold mb-12 text-purple-400 relative">
         Works
         <span className="absolute -top-3 -left-4 text-purple-400/20 text-5xl md:text-7xl">Works</span>
