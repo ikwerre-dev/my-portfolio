@@ -11,6 +11,7 @@ import Works from "./components/Works";
 import { Flame } from 'lucide-react';
 import { ImSpoonKnife } from 'react-icons/im';
 import ConnectWithMe from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -110,6 +111,7 @@ function App() {
       <Educations />
       <Works />
       <ConnectWithMe />
+      <Footer /> 
     </div>
   );
 }
