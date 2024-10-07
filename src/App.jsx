@@ -10,6 +10,7 @@ import Experiences from "./components/Experience";
 import Works from "./components/Works";
 import { Flame } from 'lucide-react';
 import { ImSpoonKnife } from 'react-icons/im';
+import ConnectWithMe from './components/Contact';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -108,6 +109,7 @@ function App() {
       <Experiences />
       <Educations />
       <Works />
+      <ConnectWithMe />
     </div>
   );
 }

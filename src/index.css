@@ -4,7 +4,9 @@
 
 
 :root{
-  background-color: black;
+  background-color: black; 
+  font-family: 'Poppins',sans-serif;
+
 }
 .font-sora {
   font-family: "Sora";

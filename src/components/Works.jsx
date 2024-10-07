@@ -32,7 +32,7 @@ const CricTrackerCard = ({color}) => {
         </div>
         <div className="flex-1">
           <div className="mt-6">
-            <h2 className="text-4xl my-2 mt-5 font-bold">CricTracker</h2>
+            <h2 className="text-4xl  my-2 mt-5 font-bold">CricTracker</h2>
 
             <h3 className="text-lg mb-2 mt-[2rem] text-center md:text-start">Project Category</h3>
             <div className="flex space-x-2">
