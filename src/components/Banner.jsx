@@ -13,7 +13,7 @@ import reactjs from '../assets/icons/reactjs.png';
 
 const SkillTag = ({ skill, style }) => (
     <div
-        className={`absolute bg-white text-black px-2 md:px-4 py-1 md:py-2 rounded-full text-xs font-semibold flex items-center transform -translate-y-1/2`}
+        className={`absolute bg-white text-black px-2 md:px-4 py-1 md:py-2 rounded-full text-xs md:text-lg font-semibold flex items-center transform -translate-y-1/2`}
         style={{ ...style, ...parseInlineStyle(skill.class) }}
     >
         {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 md:w-12 h-5 md:h-12 mr-2" />}
@@ -67,7 +67,7 @@ const Banner = () => {
     return (
         <div className="banner relative bg-black text-white h-[32rem] md:h-[53rem] py-16 px-6 overflow-hidden">
             <div className="absolute inset-0 z-0">
-                <img src={BannerImage2} alt="Background" className="w-full h-full object-cover md:object-contain opacity-30 md:opacity-35 animate-barrel-roll-x mt-[3rem] md:mt-[8rem]" />
+                <img src={BannerImage2} alt="Background" className="w-full h-full object-cover md:object-contain opacity-35 md:opacity-50 animate-barrel-roll-x mt-[3rem] md:mt-[8rem]" />
             </div>
             <div className="relative z-10 flex flex-col items-center mt-5 pt-5 md:pt-0 max-w-5xl mx-auto">
                 <h1 className="text-[1.5rem] md:text-[4rem] font-bold font-gluten mb-4 px-8 rounded rounded-[3rem] border-purple-900 border-2 md:border-4">
