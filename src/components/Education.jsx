@@ -1,18 +1,18 @@
 import React from 'react';
-import { Calendar, GraduationCap, Star } from 'lucide-react';
+import { Calendar, GraduationCap, MapPin, Star } from 'lucide-react';
 import user from '../assets/user.png';
 const educations = [
   {
-    text: "Bachelor Degree",
-    author: "Rupam karmakar",
-    location: "Maharashtra, India",
-    flag: "IN"
+    text: "O-Level",
+    author: "High School",
+    location: "UDSS, Uniport",
+    flag: "2016-2022"
   },
   {
-    text: "Bachelor Degree",
-    author: "Bilal Karimbath",
-    location: "Dubai, UAE",
-    flag: "AE"
+    text: "Bachelor Degree - Computer Science",
+    author: "University",
+    location: "University of Port Harcourt",
+    flag: "2023 - present"
   },
 
 ];
@@ -28,17 +28,17 @@ const EducationCard = ({ text, author, location, flag }) => (
         <div className="flex flex-col md:flex-row justify-between items-center gap-0">
           <div
             className={` bg-stone-950 font-sora w-full md:w-auto text-purple-500 px-4 py-2 rounded-full md:text-lg font-semibold flex gap-2 items-center `}>
-            <Calendar /><span> 2022 to 2024</span>
+            <Calendar /><span> {flag}</span>
           </div>
 
           <div
             className={` bg-white font-sora w-full md:w-auto mt-5 md:mt-0 text-yellow-950 px-4 py-2 rounded-full md:text-lg font-semibold flex items-center `}>
-            PRIMARY
+            {author}
           </div>
 
         </div>
         <p className="text-black text-lg md:text-2xl my-1 md:my-4 pt-3 flex items-center gap-3"><div className="w-10 h-10 rounded-full flex flex-col items-center justify-center bg-black"><GraduationCap className='text-purple-500' /></div> <span>{text}</span></p>
-        <p className="text-black text-lg md:text-2xl my-1 md:my-4 pt-3 flex items-center gap-3"><div className="w-10 h-10 rounded-full flex flex-col items-center justify-center bg-black"><GraduationCap className='text-purple-500' /></div> <span>{text}</span></p>
+        <p className="text-black text-lg md:text-2xl my-1 md:my-4 pt-3 flex items-center gap-3"><div className="w-10 h-10 rounded-full flex flex-col items-center justify-center bg-black"><MapPin className='text-purple-500' /></div> <span>{location}</span></p>
       </div>
 
     </div>
