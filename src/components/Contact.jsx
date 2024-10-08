@@ -61,7 +61,7 @@ const ConnectWithMe = () => {
         Contact Me
         <span className="absolute -top-4 -left-7  text-purple-400/20 text-4xl md:text-6xl">Contact Me</span>
       </h2>
-      <div className="flex-col md:flex-row flex justify-center flex-wrap gap-4 mt-10 mb-4 w-full gap-[1rem] md:gap-[1.5rem] md:max-w-7xl">
+      <div className="flex-col md:flex-row flex justify-center flex-wrap gap-4 mt-10 mb-4 w-full gap-[1rem]   md:gap-[1.5rem] md:max-w-7xl">
         {socialLinks.map((link) => (
           <button key={link.name} className="flex w-auto justify-between items-center bg-white text-black rounded-full py-[.5rem] md:py-[1.5rem] px-[1rem] md:px-[2rem] hover:opacity-90 transition-opacity">
             <span className={`${link.color} text-white p-2 rounded-full mr-2`}>
