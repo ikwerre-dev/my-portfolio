@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
 
       <div className="mt-4 flex flex-col md:flex-row space-x-4">
         <div className="flex-1">
-          <img src={project.image} alt={`${project.name} Website`} className="rounded-xl w-full" />
+          <img src={project.image} alt={`${project.name} Website`} className="max-w-md rounded-xl w-full" />
         </div>
         <div className="flex-1">
           <div className="mt-6">
