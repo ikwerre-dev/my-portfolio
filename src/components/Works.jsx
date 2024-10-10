@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Laptop, MapPin, Star, Link2, Info, Github, GithubIcon } from 'lucide-react';
+import { Calendar, Laptop, MapPin, Star, Link2, Info, Github, GithubIcon, Link2Icon } from 'lucide-react';
 import { BiCaretRight } from 'react-icons/bi';
 import launchpad from '../assets/sites/launchpad.png'
 import indulgetix from '../assets/sites/indulgetix.png'
@@ -10,6 +10,7 @@ import { DiGithub, DiNodejs } from 'react-icons/di';
 import { BsBootstrap } from 'react-icons/bs';
 import { FaNodeJs } from 'react-icons/fa6';
 import { SiTailwindcss } from 'react-icons/si';
+import { MdPhp } from 'react-icons/md';
 const ProjectCard = ({ project }) => {
   return (
     <div className={`${project.color} text-white p-6 rounded-3xl max-w-7xl mx-auto`}>
@@ -17,54 +18,74 @@ const ProjectCard = ({ project }) => {
         <div className="flex items-center space-x-2">
           {/* Add any additional header content here */}
         </div>
-        <button className="bg-white rounded-full p-2">
-          <Info className="w-5 h-5 text-blue-900" />
-        </button>
+        <a href={project.link}
+          target="_blank"
+          rel="noopener noreferrer" className="bg-white rounded-full p-2">
+          <Link2Icon className="w-5 h-5 text-blue-900" />
+        </a>
       </div>
 
-      <div className="mt-4 flex flex-col md:flex-row space-x-4">
-        <div className="flex-1">
-          <img src={project.image} alt={`${project.name} Website`} className="max-w-md rounded-xl w-full" />
-        </div>
-        <div className="flex-1">
-          <div className="mt-6">
-            <h2 className="text-4xl my-2 mt-5 font-bold">{project.name}</h2>
-
-            <h3 className="text-lg mb-2 mt-[2rem] text-center md:text-start">Project Category</h3>
-            <div className="flex space-x-2">
-              {project.categories.map((category, index) => (
-                <span key={index} className="bg-white text-blue-900 px-6 py-2 rounded-full text-lg flex items-center space-x-1">{category}</span>
-              ))}
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="lg:w-1/2">
+            <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
+              <img
+                src={project.image}
+                alt={`${project.name} Website`}
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
+          <div className="lg:w-1/2 flex flex-col justify-between">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">{project.name}</h2>
 
-          <div className="mt-6">
-            <h3 className="text-lg mb-2 text-center md:text-start">Technologies I used</h3>
-            <div className="flex flex-wrap flex-col md:flex-row gap-2">
-              {project.technologies.map((tech, index) => (
-                <span key={index} className="bg-white text-blue-900 px-6 py-2 rounded-full text-lg flex items-center space-x-1">
-                  <span className="font-bold">{tech.icon}</span>
-                  <span>{tech.name}</span>
-                </span>
-              ))}
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-3">Project Category</h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.categories.map((category, index) => (
+                    <span key={index} className="bg-white text-blue-900 px-4 py-2 rounded-full text-lg">
+                      {category}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-3">Technologies Used</h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="bg-white text-blue-900 px-4 py-2 rounded-full text-lg flex items-center space-x-2">
+                      <span className="font-bold">{tech.icon}</span>
+                      <span>{tech.name}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="mt-6 flex gap-5">
-            <a href={project.link} target='_blank' className="bg-black   hover:bg-black px-4 py-3 rounded-full flex items-center justify-between   space-x-2">
-              <Link2 className="w-4 h-4" />
-              <span className='text-center'>Go To {project.name}</span>
-            </a>
-            {
-              project && project.githublink ? (
-                <a href={project.githublink} target='_blank' className="bg-black   hover:bg-black px-4 py-3  rounded-full flex items-center justify-between   space-x-2">
-                  <GithubIcon className="w-4 h-4" />
-                  <span className='text-center'>View on Github</span>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-white hover:bg-gray-800 px-6 py-3 rounded-full flex items-center justify-center space-x-2 transition duration-300"
+              >
+                <Link2 className="w-5 h-5" />
+                <span>Visit Project</span>
+              </a>
+              {project.githublink && (
+                <a
+                  href={project.githublink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-white hover:bg-gray-800 px-6 py-3 rounded-full flex items-center justify-center space-x-2 transition duration-300"
+                >
+                  <GithubIcon className="w-5 h-5" />
+                  <span>View on GitHub</span>
                 </a>
-              ) : ''
-
-
-            }
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -108,9 +129,10 @@ const projectsData = [
     image: indulgetix,
     categories: ['Event Management', 'Frontend', 'Backend'],
     technologies: [
-      { name: 'Swift', icon: 'Swift' },
-      { name: 'Node.js', icon: 'Node' },
-      { name: 'MongoDB', icon: 'Mongo' },
+      { name: 'Tailwind', icon: <SiTailwindcss /> },
+      { name: 'Node.js', icon: <FaNodeJs /> },
+      { name: 'ReactJS', icon: <GrReactjs /> },
+      { name: 'PHP', icon: <MdPhp /> },
     ],
     link: 'https://event.indulgetix.com/',
   },
