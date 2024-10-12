@@ -3,25 +3,25 @@ import { Star } from 'lucide-react';
 import user from '../assets/user.png';
 const testimonials = [
   {
-    text: "His designing skill and programming skill is really good and very collaborative.",
-    author: "Rupam karmakar",
-    location: "Maharashtra, India",
-    flag: "IN"
+    text: "Met Honour in 2022, I'm super amazed at his growth, Keep winning Bro",
+    author: "Richard",
+    location: "Nigeria",
+    flag: "NG"
   },
   {
-    text: "Nikunj delivered excellent work on the Next.js project, and I thoroughly enjoyed collaborating with him. His communication was clear, he consistently met all deadlines, and demonstrated strong skills.",
+    text: "Honour delivered excellent work on the Next.js project, and I thoroughly enjoyed collaborating with him. His communication was clear, he consistently met all deadlines, and demonstrated strong skills.",
     author: "Bilal Karimbath",
     location: "Dubai, UAE",
     flag: "AE"
   },
   {
-    text: "Nikunj, Thank you for all your hard work throughout this engagement. I have been very impressed and it's been a pleasure to work with you.",
+    text: "Honour, Thank you for all your hard work throughout this engagement. I have been very impressed and it's been a pleasure to work with you.",
     author: "Foteh Gafarov",
     location: "New York, USA",
     flag: "US"
   },
   {
-    text: "Working with Nikunj has been an absolute pleasure! He's extremely skilled and efficient. I highly recommend him to anyone looking for top-notch work. His attention to detail and commitment to meeting project goals truly set him apart. A great choice for any project!",
+    text: "Working with Honour has been an absolute pleasure! He's extremely skilled and efficient. I highly recommend him to anyone looking for top-notch work. His attention to detail and commitment to meeting project goals truly set him apart. A great choice for any project!",
     author: "Isaac Kadosh",
     location: "Chicago, USA",
     flag: "US"
