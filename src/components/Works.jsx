@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Laptop, MapPin, Star, Link2, Info, Github, GithubIcon, Link2Icon } from 'lucide-react';
+import { Calendar, Laptop, MapPin, Star, Link2, Info, Github, GithubIcon, Link2Icon, Briefcase } from 'lucide-react';
 import { BiCaretRight } from 'react-icons/bi';
 import launchpad from '../assets/sites/launchpad.png'
 import indulgetix from '../assets/sites/indulgetix.png'
@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
     <div className={`${project.color} text-white p-6 rounded-3xl max-w-7xl mx-auto`}>
       <div className="flex justify-between items-start">
         <div className="flex items-center space-x-2">
-         </div>
+        </div>
         <a href={project.link}
           target="_blank"
           rel="noopener noreferrer" className="bg-white rounded-full p-2">
@@ -37,24 +37,25 @@ const ProjectCard = ({ project }) => {
           </div>
           <div className="lg:w-1/2 flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl font-bold mb-6">{project.name}</h2>
+              <h2 className="text-3xl font-bold font-gluten mb-6">{project.name}</h2>
 
               <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-3">Project Category</h3>
+                <h3 className="text-lg font-semibold font-gluten mb-1">Project Category</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.categories.map((category, index) => (
-                    <span key={index} className="bg-white text-blue-900 px-4 py-2 rounded-full text-lg">
-                      {category}
+                    <span key={index} className="bg-white text-blue-900 py-2 px-3 md:px-4 md:py-2 rounded-full text-sm md:text-lg flex items-center space-x-2">
+                      <span className="font-bold"><Briefcase size={15} /></span>
+                      <span>{category}</span>
                     </span>
                   ))}
                 </div>
               </div>
 
               <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-3">Technologies Used</h3>
+                <h3 className="text-lg font-semibold font-gluten mb-1">Technologies Used</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, index) => (
-                    <span key={index} className="bg-white text-blue-900 px-4 py-2 rounded-full text-lg flex items-center space-x-2">
+                    <span key={index} className="bg-white text-blue-900 py-2 px-3 md:px-4 md:py-2 rounded-full text-sm md:text-lg flex items-center space-x-2">
                       <span className="font-bold">{tech.icon}</span>
                       <span>{tech.name}</span>
                     </span>
@@ -63,25 +64,25 @@ const ProjectCard = ({ project }) => {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex justify-between gap-5">
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black text-white hover:bg-gray-800 px-6 py-3 rounded-full flex items-center justify-center space-x-2 transition duration-300"
+                className="bg-black text-white hover:bg-gray-800 w-full py-2 px-3 md:px-4 md:py-2 rounded-full text-lg rounded-full flex items-center justify-center space-x-2 transition duration-300"
               >
                 <Link2 className="w-5 h-5" />
-                <span>Visit Project</span>
+                <span>View</span>
               </a>
               {project.githublink && (
                 <a
                   href={project.githublink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black text-white hover:bg-gray-800 px-6 py-3 rounded-full flex items-center justify-center space-x-2 transition duration-300"
+                  className="bg-black text-white hover:bg-gray-800 w-full  py-2 px-3 md:px-4 md:py-2 rounded-full text-lg rounded-full flex items-center justify-center space-x-2 transition duration-300"
                 >
                   <GithubIcon className="w-5 h-5" />
-                  <span>View on GitHub</span>
+                  <span>GitHub</span>
                 </a>
               )}
             </div>

@@ -84,9 +84,9 @@ const Banner = () => {
                         <Download className="w-4 h-4 mr-2" />
                         Resume
                     </button>
-                    <button className="border border-purple-500 bg-purple-500 text-black hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500 px-4 md:px-7 text-l py-3 rounded-full">
+                    <a href='#contact' className="border border-purple-500 bg-purple-500 text-black hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500 px-4 md:px-7 text-l py-3 rounded-full">
                         Hire Me
-                    </button>
+                    </a>
                 </div>
                 <motion.div 
                     className="opacity-0 relative w-[98vw] md:w-auto"
