@@ -16,8 +16,7 @@ const ProjectCard = ({ project }) => {
     <div className={`${project.color} text-white p-6 rounded-3xl max-w-7xl mx-auto`}>
       <div className="flex justify-between items-start">
         <div className="flex items-center space-x-2">
-          {/* Add any additional header content here */}
-        </div>
+         </div>
         <a href={project.link}
           target="_blank"
           rel="noopener noreferrer" className="bg-white rounded-full p-2">
@@ -154,7 +153,7 @@ const projectsData = [
 
 const Works = () => {
   return (
-    <div className="bg-black my-[5rem] p-8 md:p-12 flex flex-col items-center justify-center">
+    <div className="bg-black my-[5rem] p-8 md:p-12 flex flex-col items-center justify-center" id='works'>
       <h2 className="text-4xl md:text-6xl font-bold mb-12 text-purple-400 relative">
         Works
         <span className="absolute -top-3 -left-4 text-purple-400/20 text-5xl md:text-7xl">Works</span>

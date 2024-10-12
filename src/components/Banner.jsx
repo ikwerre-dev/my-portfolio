@@ -65,7 +65,7 @@ const Banner = () => {
     const rightSkillsWithPositions = getSkillPositions(rightSkills, false);
 
     return (
-        <div className="banner relative bg-black text-white h-[32rem] md:h-[53rem] py-16 px-6 overflow-hidden">
+        <div className="banner relative bg-black text-white h-[32rem] md:h-[53rem] py-16 px-6 overflow-hidden" id='banner'>
             <div className="absolute inset-0 z-0">
                 <img src={BannerImage2} alt="Background" className="w-full h-full object-cover md:object-contain opacity-35 md:opacity-50 animate-barrel-roll-x mt-[3rem] md:mt-[8rem]" />
             </div>

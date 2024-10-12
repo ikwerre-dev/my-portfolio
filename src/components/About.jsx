@@ -10,7 +10,7 @@ const AboutMe = () => {
     };
 
     return (
-        <div className="bg-black text-white min-h-screen p-8  flex flex-col items-center justify-center">
+        <div className="bg-black text-white min-h-screen p-8  flex flex-col items-center justify-center" id='about'>
             <h1 className="text-4xl md:text-6xl font-bold my-12 relative">
                 <span className="text-purple-400 mx-10 md:mx-0">About Me</span>
                 <span className="absolute -top-4 left-0 text-purple-400/20 text-5xl md:text-6xl">About Me</span>
