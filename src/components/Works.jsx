@@ -5,8 +5,9 @@ import launchpad from '../assets/sites/launchpad.png'
 import indulgetix from '../assets/sites/indulgetix.png'
 import sme from '../assets/sites/sme.png'
 import portfolio from '../assets/sites/portfolio.png'
+import veefa from '../assets/sites/veefa.png'
 import { GrReactjs } from 'react-icons/gr';
-import { DiGithub, DiNodejs } from 'react-icons/di';
+import { DiGithub, DiJqueryLogo, DiNodejs } from 'react-icons/di';
 import { BsBootstrap } from 'react-icons/bs';
 import { FaNodeJs } from 'react-icons/fa6';
 import { SiTailwindcss } from 'react-icons/si';
@@ -108,6 +109,19 @@ const projectsData = [
     link: 'https://sme-unwind.vercel.app/',
     githublink: 'https://github.com/ikwerre-dev/sme-unwind-Dashboard',
 
+  },
+  {
+    name: 'Veefa',
+    color: 'bg-purple-900 bg-opacity-50',
+    image: veefa,
+    categories: ['MarketPlace', 'MultiVendor'],
+    technologies: [
+      { name: 'Bootstrap', icon: <BsBootstrap /> },
+      { name: 'PHP', icon: <MdPhp /> },
+      { name: 'Jquery', icon: <DiJqueryLogo /> },
+    ],
+    link: 'https://veefa.co/',
+ 
   },
   {
     name: 'My Portfolio',
