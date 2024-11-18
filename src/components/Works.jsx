@@ -97,6 +97,34 @@ const ProjectCard = ({ project }) => {
 const projectsData = [
 
   {
+    name: 'UncutXtra Awards Site',
+    color: 'bg-purple-900 bg-opacity-50',
+    image: sme,
+    categories: ['Event', 'Award Page'],
+    technologies: [
+      { name: 'Tailwind', icon: <SiTailwindcss /> },
+      { name: 'Node.js', icon: <FaNodeJs /> },
+      { name: 'ReactJS', icon: <GrReactjs /> },
+    ],
+    link: 'https://uncutxtra.vercel.app',
+    // githublink: 'https://github.com/ikwerre-dev/sme-unwind-Dashboard',
+
+  },
+  {
+    name: 'My Ticket Seller',
+    color: 'bg-purple-900 bg-opacity-50',
+    image: sme,
+    categories: ['Event', 'Single Page'],
+    technologies: [
+      { name: 'Tailwind', icon: <SiTailwindcss /> },
+      { name: 'Node.js', icon: <FaNodeJs /> },
+      { name: 'ReactJS', icon: <GrReactjs /> },
+    ],
+    link: 'https://myticketseller.com',
+    // githublink: 'https://github.com/ikwerre-dev/sme-unwind-Dashboard',
+
+  },
+  {
     name: 'SME Event',
     color: 'bg-purple-900 bg-opacity-50',
     image: sme,
