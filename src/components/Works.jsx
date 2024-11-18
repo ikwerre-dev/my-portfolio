@@ -5,6 +5,8 @@ import launchpad from '../assets/sites/launchpad.png'
 import indulgetix from '../assets/sites/indulgetix.png'
 import sme from '../assets/sites/sme.png'
 import portfolio from '../assets/sites/portfolio.png'
+import uncutxtra from '../assets/sites/uncutxtra.png'
+import myticketseller from '../assets/sites/myticketseller.png'
 import veefa from '../assets/sites/veefa.png'
 import { GrReactjs } from 'react-icons/gr';
 import { DiGithub, DiJqueryLogo, DiNodejs } from 'react-icons/di';
@@ -99,7 +101,7 @@ const projectsData = [
   {
     name: 'UncutXtra Awards Site',
     color: 'bg-purple-900 bg-opacity-50',
-    image: sme,
+    image: uncutxtra,
     categories: ['Event', 'Award Page'],
     technologies: [
       { name: 'Tailwind', icon: <SiTailwindcss /> },
@@ -113,7 +115,7 @@ const projectsData = [
   {
     name: 'My Ticket Seller',
     color: 'bg-purple-900 bg-opacity-50',
-    image: sme,
+    image: myticketseller,
     categories: ['Event', 'Single Page'],
     technologies: [
       { name: 'Tailwind', icon: <SiTailwindcss /> },
