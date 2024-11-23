@@ -106,10 +106,10 @@ function App() {
       <Header />
       <Banner />
       <AboutMe />
-      <Testimonials />
+      <Works />
       <Experiences />
       <Educations />
-      <Works />
+      <Testimonials />
       <ConnectWithMe />
       <Footer /> 
     </div>
