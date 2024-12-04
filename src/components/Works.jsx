@@ -8,11 +8,13 @@ import portfolio from '../assets/sites/portfolio.png'
 import uncutxtra from '../assets/sites/uncutxtra.png'
 import myticketseller from '../assets/sites/myticketseller.png'
 import veefa from '../assets/sites/veefa.png'
+import clanshare from '../assets/sites/clanshare.png'
+import cryptowalletapp from '../assets/sites/cryptowalletapp.png'
 import { GrReactjs } from 'react-icons/gr';
 import { DiGithub, DiJqueryLogo, DiNodejs } from 'react-icons/di';
 import { BsBootstrap } from 'react-icons/bs';
 import { FaNodeJs } from 'react-icons/fa6';
-import { SiTailwindcss } from 'react-icons/si';
+import { SiExpo, SiRsocket, SiTailwindcss } from 'react-icons/si';
 import { MdPhp } from 'react-icons/md';
 const ProjectCard = ({ project }) => {
   return (
@@ -30,17 +32,17 @@ const ProjectCard = ({ project }) => {
       <div className="container mx-auto px-4 py-4 md:py-8">
         <div className="flex flex-col gap-8">
           <div className="lg:full">
-            <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
+            <div className="aspect-w-16 w-full md:h-[20rem] aspect-h-9 rounded-xl overflow-hidden">
               <img
                 src={project.image}
                 alt={`${project.name} Website`}
-                className="object-cover w-full h-full"
+                className="object-cover w-full"
               />
             </div>
           </div>
           <div className="lg:full flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl text-center font-bold font-gluten mb-6">{project.name}</h2>
+              <h2 className="text-3xl  font-bold font-gluten mb-6">{project.name}</h2>
 
               <div className="mb-6">
                 <h3 className="text-lg font-semibold font-gluten mb-1">Project Category</h3>
@@ -68,15 +70,18 @@ const ProjectCard = ({ project }) => {
             </div>
 
             <div className="flex justify-between gap-5">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black text-white hover:bg-gray-800 w-full py-2 px-3 md:px-4 md:py-2 rounded-full text-lg rounded-full flex items-center justify-center space-x-2 transition duration-300"
-              >
-                <Link2 className="w-5 h-5" />
-                <span>View</span>
-              </a>
+
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-white hover:bg-gray-800 w-full py-2 px-3 md:px-4 md:py-2 rounded-full text-lg rounded-full flex items-center justify-center space-x-2 transition duration-300"
+                >
+                  <Link2 className="w-5 h-5" />
+                  <span>View</span>
+                </a>
+              )}
               {project.githublink && (
                 <a
                   href={project.githublink}
@@ -179,6 +184,35 @@ const projectsData = [
       { name: 'PHP', icon: <MdPhp /> },
     ],
     link: 'https://event.indulgetix.com/',
+  },
+  {
+    name: 'Clan Share',
+    color: 'bg-purple-900 bg-opacity-50',
+    image: clanshare,
+    categories: ['File Sharing', 'Tunnel'],
+    technologies: [
+      { name: 'Tailwind', icon: <SiTailwindcss /> },
+      { name: 'Node.js', icon: <FaNodeJs /> },
+      { name: 'ReactJS', icon: <GrReactjs /> },
+      { name: 'PHP', icon: <MdPhp /> },
+    ],
+    link: 'https://clanshare.vercel.app/',
+    githublink: 'https://github.com/ikwerre-dev/clanshare',
+
+  },
+  {
+    name: 'Cryto Wallet APP',
+    color: 'bg-purple-900 bg-opacity-50',
+    image: cryptowalletapp,
+    categories: ['Mobile App', 'Web3'],
+    technologies: [
+      { name: 'Expo', icon: <SiExpo /> },
+      { name: 'Node.js', icon: <FaNodeJs /> },
+      { name: 'React Native', icon: <GrReactjs /> },
+    ],
+    // link: 'https://github.com/ikwerre-dev/cryptowallet',
+    githublink: 'https://github.com/ikwerre-dev/cryptowallet',
+
   },
   {
     name: 'Dittoswaps',
