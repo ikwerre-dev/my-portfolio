@@ -60,12 +60,12 @@ const ProjectCard = ({ project }) => {
           </div>
           <div className="lg:full flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl  font-bold font-gluten mb-6">
+              <h2 className="text-3xl  font-bold font-luckiest-guy mb-6">
                 {project.name}
               </h2>
 
               <div className="mb-6">
-                <h3 className="text-lg font-semibold font-gluten mb-1">
+                <h3 className="text-lg font-semibold  mb-2">
                   Project Category
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -84,7 +84,7 @@ const ProjectCard = ({ project }) => {
               </div>
 
               <div className="mb-6">
-                <h3 className="text-lg font-semibold font-gluten mb-1">
+                <h3 className="text-lg font-semibold  mb-2">
                   Technologies Used
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -159,7 +159,7 @@ const projectsData = [
     link: "https://uncutxtra.vercel.app",
   },
   {
-    name: "My Ticket Seller",
+    name: "My TicketSeller",
     color: "bg-purple-900 bg-opacity-50",
     image: myticketseller,
     categories: ["Event", "Single Page", "Frontend"],
