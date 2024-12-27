@@ -1,30 +1,48 @@
-import React from 'react';
-import { Calendar, Laptop, MapPin, Star, Link2, Info, Github, GithubIcon, Link2Icon, Briefcase } from 'lucide-react';
-import { BiCaretRight } from 'react-icons/bi';
-import launchpad from '../assets/sites/launchpad.png'
-import indulgetix from '../assets/sites/indulgetix.png'
-import sme from '../assets/sites/sme.png'
-import portfolio from '../assets/sites/portfolio.png'
-import uncutxtra from '../assets/sites/uncutxtra.png'
-import myticketseller from '../assets/sites/myticketseller.png'
-import veefa from '../assets/sites/veefa.png'
-import clanshare from '../assets/sites/clanshare.png'
-import cryptowalletapp from '../assets/sites/cryptowalletapp.png'
-import { GrReactjs } from 'react-icons/gr';
-import { DiGithub, DiJqueryLogo, DiNodejs } from 'react-icons/di';
-import { BsBootstrap } from 'react-icons/bs';
-import { FaNodeJs } from 'react-icons/fa6';
-import { SiExpo, SiRsocket, SiTailwindcss } from 'react-icons/si';
-import { MdPhp } from 'react-icons/md';
+import React, { useState } from "react";
+import {
+  Calendar,
+  Laptop,
+  MapPin,
+  Star,
+  Link2,
+  Info,
+  Github,
+  GithubIcon,
+  Link2Icon,
+  Briefcase,
+} from "lucide-react";
+import { BiCaretRight, BiLogoTypescript } from "react-icons/bi";
+import launchpad from "../assets/sites/launchpad.png";
+import indulgetix from "../assets/sites/indulgetix.png";
+import sme from "../assets/sites/sme.png";
+import portfolio from "../assets/sites/portfolio.png";
+import uncutxtra from "../assets/sites/uncutxtra.png";
+import myticketseller from "../assets/sites/myticketseller.png";
+import veefa from "../assets/sites/veefa.png";
+import formNavigator from "../assets/sites/form-navigator.png";
+import clanshare from "../assets/sites/clanshare.png";
+import cryptowalletapp from "../assets/sites/cryptowalletapp.png";
+import { GrReactjs } from "react-icons/gr";
+import { DiGithub, DiJqueryLogo, DiNodejs } from "react-icons/di";
+import { BsBootstrap } from "react-icons/bs";
+import { FaNodeJs } from "react-icons/fa6";
+import { SiExpo, SiJavascript, SiRsocket, SiTailwindcss } from "react-icons/si";
+import { MdPhp } from "react-icons/md";
+
+
 const ProjectCard = ({ project }) => {
   return (
-    <div className={`${project.color} text-white p-6 rounded-3xl max-w-7xl mx-auto`}>
+    <div
+      className={`${project.color} text-white p-6 rounded-3xl max-w-7xl mx-auto`}
+    >
       <div className="hidden md:flex justify-between items-start">
-        <div className="flex items-center space-x-2">
-        </div>
-        <a href={project.link}
+        <div className="flex items-center space-x-2"></div>
+        <a
+          href={project.link}
           target="_blank"
-          rel="noopener noreferrer" className="bg-white rounded-full p-2">
+          rel="noopener noreferrer"
+          className="bg-white rounded-full p-2"
+        >
           <Link2Icon className="w-5 h-5 text-blue-900" />
         </a>
       </div>
@@ -42,14 +60,23 @@ const ProjectCard = ({ project }) => {
           </div>
           <div className="lg:full flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl  font-bold font-gluten mb-6">{project.name}</h2>
+              <h2 className="text-3xl  font-bold font-gluten mb-6">
+                {project.name}
+              </h2>
 
               <div className="mb-6">
-                <h3 className="text-lg font-semibold font-gluten mb-1">Project Category</h3>
+                <h3 className="text-lg font-semibold font-gluten mb-1">
+                  Project Category
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.categories.map((category, index) => (
-                    <span key={index} className="bg-white text-blue-900 py-2 px-3 md:px-4 md:py-2 rounded-full text-sm md:text-lg flex items-center space-x-2">
-                      <span className="font-bold"><Briefcase size={15} /></span>
+                    <span
+                      key={index}
+                      className="bg-white text-blue-900 py-2 px-3 md:px-4 md:py-2 rounded-full text-sm md:text-lg flex items-center space-x-2"
+                    >
+                      <span className="font-bold">
+                        <Briefcase size={15} />
+                      </span>
                       <span>{category}</span>
                     </span>
                   ))}
@@ -57,10 +84,15 @@ const ProjectCard = ({ project }) => {
               </div>
 
               <div className="mb-6">
-                <h3 className="text-lg font-semibold font-gluten mb-1">Technologies Used</h3>
+                <h3 className="text-lg font-semibold font-gluten mb-1">
+                  Technologies Used
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, index) => (
-                    <span key={index} className="bg-white text-blue-900 py-2 px-3 md:px-4 md:py-2 rounded-full text-sm md:text-lg flex items-center space-x-2">
+                    <span
+                      key={index}
+                      className="bg-white text-blue-900 py-2 px-3 md:px-4 md:py-2 rounded-full text-sm md:text-lg flex items-center space-x-2"
+                    >
                       <span className="font-bold">{tech.icon}</span>
                       <span>{tech.name}</span>
                     </span>
@@ -70,7 +102,6 @@ const ProjectCard = ({ project }) => {
             </div>
 
             <div className="flex justify-between gap-5">
-
               {project.link && (
                 <a
                   href={project.link}
@@ -102,143 +133,176 @@ const ProjectCard = ({ project }) => {
 };
 
 const projectsData = [
-
   {
-    name: 'UncutXtra Awards Site',
-    color: 'bg-purple-900 bg-opacity-50',
+    name: "Form Validator Library",
+    color: "bg-purple-900 bg-opacity-50",
+    image: formNavigator,
+    categories: ["Library", "TypeScript", "Frontend"],
+    technologies: [
+      { name: "TypeScript", icon: <BiLogoTypescript /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Javascript", icon: <SiJavascript /> },
+    ],
+    link: "https://www.npmjs.com/package/robinson-form-validator",
+    githublink: "https://github.com/ikwerre-dev/Form-Validator-Library",
+  },
+  {
+    name: "UncutXtra Awards Site",
+    color: "bg-purple-900 bg-opacity-50",
     image: uncutxtra,
-    categories: ['Event', 'Award Page'],
+    categories: ["Event", "Award Page", "Frontend"],
     technologies: [
-      { name: 'Tailwind', icon: <SiTailwindcss /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'ReactJS', icon: <GrReactjs /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "ReactJS", icon: <GrReactjs /> },
     ],
-    link: 'https://uncutxtra.vercel.app',
-    // githublink: 'https://github.com/ikwerre-dev/sme-unwind-Dashboard',
-
+    link: "https://uncutxtra.vercel.app",
   },
   {
-    name: 'My Ticket Seller',
-    color: 'bg-purple-900 bg-opacity-50',
+    name: "My Ticket Seller",
+    color: "bg-purple-900 bg-opacity-50",
     image: myticketseller,
-    categories: ['Event', 'Single Page'],
+    categories: ["Event", "Single Page", "Frontend"],
     technologies: [
-      { name: 'Tailwind', icon: <SiTailwindcss /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'ReactJS', icon: <GrReactjs /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "ReactJS", icon: <GrReactjs /> },
     ],
-    link: 'https://myticketseller.com',
-    // githublink: 'https://github.com/ikwerre-dev/sme-unwind-Dashboard',
-
+    link: "https://myticketseller.com",
   },
   {
-    name: 'SME Event',
-    color: 'bg-purple-900 bg-opacity-50',
+    name: "SME Event",
+    color: "bg-purple-900 bg-opacity-50",
     image: sme,
-    categories: ['Event', 'Single Page'],
+    categories: ["Event", "Single Page", "Frontend"],
     technologies: [
-      { name: 'Tailwind', icon: <SiTailwindcss /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'ReactJS', icon: <GrReactjs /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "ReactJS", icon: <GrReactjs /> },
     ],
-    link: 'https://sme-unwind.vercel.app/',
-    githublink: 'https://github.com/ikwerre-dev/sme-unwind-Dashboard',
-
+    link: "https://sme-unwind.vercel.app/",
+    githublink: "https://github.com/ikwerre-dev/sme-unwind-Dashboard",
   },
   {
-    name: 'Veefa',
-    color: 'bg-purple-900 bg-opacity-50',
+    name: "Veefa",
+    color: "bg-purple-900 bg-opacity-50",
     image: veefa,
-    categories: ['MarketPlace', 'MultiVendor'],
+    categories: ["MarketPlace", "MultiVendor", "Frontend", "Backend"],
     technologies: [
-      { name: 'Bootstrap', icon: <BsBootstrap /> },
-      { name: 'PHP', icon: <MdPhp /> },
-      { name: 'Jquery', icon: <DiJqueryLogo /> },
+      { name: "Bootstrap", icon: <BsBootstrap /> },
+      { name: "PHP", icon: <MdPhp /> },
+      { name: "Jquery", icon: <DiJqueryLogo /> },
     ],
-    link: 'https://veefa.co/',
-
+    link: "https://veefa.co/",
   },
   {
-    name: 'My Portfolio',
-    color: 'bg-purple-900 bg-opacity-50',
+    name: "My Portfolio",
+    color: "bg-purple-900 bg-opacity-50",
     image: portfolio,
-    categories: ['Portfolio', 'Single Page'],
+    categories: ["Portfolio", "Single Page", "Frontend"],
     technologies: [
-      { name: 'Tailwind', icon: <SiTailwindcss /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'ReactJS', icon: <GrReactjs /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "ReactJS", icon: <GrReactjs /> },
     ],
-    link: 'https://robinsonhonour.vercel.app/',
-    githublink: 'https://github.com/ikwerre-dev/my-portfolio',
-
+    link: "https://robinsonhonour.vercel.app/",
+    githublink: "https://github.com/ikwerre-dev/my-portfolio",
   },
   {
-    name: 'Indulgetix',
-    color: 'bg-purple-800 bg-opacity-50',
+    name: "Indulgetix",
+    color: "bg-purple-800 bg-opacity-50",
     image: indulgetix,
-    categories: ['Event Management', 'Frontend', 'Backend'],
+    categories: ["Event Management", "Frontend", "Backend"],
     technologies: [
-      { name: 'Tailwind', icon: <SiTailwindcss /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'ReactJS', icon: <GrReactjs /> },
-      { name: 'PHP', icon: <MdPhp /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "ReactJS", icon: <GrReactjs /> },
+      { name: "PHP", icon: <MdPhp /> },
     ],
-    link: 'https://event.indulgetix.com/',
+    link: "https://event.indulgetix.com/",
   },
   {
-    name: 'Clan Share',
-    color: 'bg-purple-900 bg-opacity-50',
+    name: "Clan Share",
+    color: "bg-purple-900 bg-opacity-50",
     image: clanshare,
-    categories: ['File Sharing', 'Tunnel'],
+    categories: ["File Sharing", "Tunnel", "Frontend", "Backend"],
     technologies: [
-      { name: 'Tailwind', icon: <SiTailwindcss /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'ReactJS', icon: <GrReactjs /> },
-      { name: 'PHP', icon: <MdPhp /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "ReactJS", icon: <GrReactjs /> },
+      { name: "PHP", icon: <MdPhp /> },
     ],
-    link: 'https://clanshare.vercel.app/',
-    githublink: 'https://github.com/ikwerre-dev/clanshare',
-
+    link: "https://clanshare.vercel.app/",
+    githublink: "https://github.com/ikwerre-dev/clanshare",
   },
   {
-    name: 'Cryto Wallet APP',
-    color: 'bg-purple-900 bg-opacity-50',
+    name: "Cryto Wallet APP",
+    color: "bg-purple-900 bg-opacity-50",
     image: cryptowalletapp,
-    categories: ['Mobile App', 'Web3'],
+    categories: ["Mobile App", "Web3", "Frontend"],
     technologies: [
-      { name: 'Expo', icon: <SiExpo /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'React Native', icon: <GrReactjs /> },
+      { name: "Expo", icon: <SiExpo /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "React Native", icon: <GrReactjs /> },
     ],
-    // link: 'https://github.com/ikwerre-dev/cryptowallet',
-    githublink: 'https://github.com/ikwerre-dev/cryptowallet',
-
+    githublink: "https://github.com/ikwerre-dev/cryptowallet",
   },
   {
-    name: 'Dittoswaps',
-    color: 'bg-purple-900 bg-opacity-50',
+    name: "Dittoswaps",
+    color: "bg-purple-900 bg-opacity-50",
     image: launchpad,
-    categories: ['Launchpad', 'Web3'],
+    categories: ["Launchpad", "Web3", "Frontend"],
     technologies: [
-      { name: 'Bootstrap', icon: <BsBootstrap /> },
-      { name: 'Node.js', icon: <FaNodeJs /> },
-      { name: 'ReactJS', icon: <GrReactjs /> },
+      { name: "Bootstrap", icon: <BsBootstrap /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "ReactJS", icon: <GrReactjs /> },
     ],
-    link: 'https://web3-blush-five.vercel.app/',
-    githublink: 'https://github.com/ikwerre-dev/web3',
-
+    link: "https://web3-blush-five.vercel.app/",
+    githublink: "https://github.com/ikwerre-dev/web3",
   },
 ];
+const Categories = ["All", "Library", "Mobile", "Frontend", "Backend", "Extensions"];
 
 const Works = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const toggleCategory = (category) => {
+    setSelectedCategory(prevCategory => prevCategory === category ? null : category);
+  };
+  const filteredProjects = selectedCategory === "All"
+    ? projectsData
+    : projectsData.filter(project => project.categories.includes(selectedCategory));
+
+
+
   return (
-    <div className="bg-black my-[5rem] p-6 md:p-12 flex flex-col items-center justify-center" id='works'>
+    <div
+      className="bg-black my-[5rem] p-6 md:p-12 flex flex-col items-center justify-center"
+      id="works"
+    >
       <h2 className="text-4xl md:text-6xl font-bold mb-12 text-purple-400 relative">
         Works
-        <span className="absolute -top-3 -left-4 text-purple-400/20 text-5xl md:text-7xl">Works</span>
+        <span className="absolute -top-3 -left-4 text-purple-400/20 text-5xl md:text-7xl">
+          Works
+        </span>
       </h2>
+      <div className="flex gap-5 flex-wrap justify-center">
+        
+
+        {Categories.map((category) => (
+          <button
+            key={category}  
+            onClick={() => toggleCategory(category)}
+            className={`
+              ${selectedCategory === category ? "border-2 border-purple-400 bg-purple-400 text-black" : "bg-transparent border-2 border-purple-400 text-purple-400"}
+              rounded-full py-3 px-6 flex items-center
+              hover:bg-purple-400 hover:text-black transition duration-300`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
       <div className="grid md:grid-cols-2  gap-6 max-w-7xl my-5 w-full">
-        {projectsData.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
       </div>
