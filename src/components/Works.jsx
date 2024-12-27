@@ -239,7 +239,7 @@ const projectsData = [
     name: "Cryto Wallet APP",
     color: "bg-purple-900 bg-opacity-50",
     image: cryptowalletapp,
-    categories: ["Mobile App", "Web3", "Frontend"],
+    categories: ["Mobile App","Mobile", "Web3", "Frontend"],
     technologies: [
       { name: "Expo", icon: <SiExpo /> },
       { name: "Node.js", icon: <FaNodeJs /> },
@@ -285,7 +285,7 @@ const Works = () => {
           Works
         </span>
       </h2>
-      <div className="flex gap-5 flex-wrap justify-center">
+      <div className="flex mb-5 gap-5 flex-wrap justify-center">
         
 
         {Categories.map((category) => (
