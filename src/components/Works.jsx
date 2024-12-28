@@ -20,6 +20,7 @@ import uncutxtra from "../assets/sites/uncutxtra.png";
 import myticketseller from "../assets/sites/myticketseller.png";
 import veefa from "../assets/sites/veefa.png";
 import formNavigator from "../assets/sites/form-navigator.png";
+import toastLibrary from "../assets/sites/toast.png";
 import clanshare from "../assets/sites/clanshare.png";
 import cryptowalletapp from "../assets/sites/cryptowalletapp.png";
 import { GrReactjs } from "react-icons/gr";
@@ -28,7 +29,6 @@ import { BsBootstrap } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa6";
 import { SiExpo, SiJavascript, SiRsocket, SiTailwindcss } from "react-icons/si";
 import { MdPhp } from "react-icons/md";
-
 
 const ProjectCard = ({ project }) => {
   return (
@@ -133,6 +133,19 @@ const ProjectCard = ({ project }) => {
 };
 
 const projectsData = [
+  {
+    name: "React.js Toast Library",
+    color: "bg-purple-900 bg-opacity-50",
+    image: toastLibrary,
+    categories: ["Library", "TypeScript", "Frontend"],
+    technologies: [
+      { name: "TypeScript", icon: <BiLogoTypescript /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Javascript", icon: <SiJavascript /> },
+    ],
+    link: "https://www.npmjs.com/package/robinson-reactjs-toast",
+    githublink: "https://github.com/ikwerre-dev/React-JS-Toast",
+  },
   {
     name: "Form Validator Library",
     color: "bg-purple-900 bg-opacity-50",
@@ -239,7 +252,7 @@ const projectsData = [
     name: "Cryto Wallet APP",
     color: "bg-purple-900 bg-opacity-50",
     image: cryptowalletapp,
-    categories: ["Mobile App","Mobile", "Web3", "Frontend"],
+    categories: ["Mobile App", "Mobile", "Web3", "Frontend"],
     technologies: [
       { name: "Expo", icon: <SiExpo /> },
       { name: "Node.js", icon: <FaNodeJs /> },
@@ -261,18 +274,28 @@ const projectsData = [
     githublink: "https://github.com/ikwerre-dev/web3",
   },
 ];
-const Categories = ["All", "Library", "Mobile", "Frontend", "Backend", "Extensions"];
+const Categories = [
+  "All",
+  "Library",
+  "Mobile",
+  "Frontend",
+  "Backend",
+  "Extensions",
+];
 
 const Works = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const toggleCategory = (category) => {
-    setSelectedCategory(prevCategory => prevCategory === category ? null : category);
+    setSelectedCategory((prevCategory) =>
+      prevCategory === category ? null : category,
+    );
   };
-  const filteredProjects = selectedCategory === "All"
-    ? projectsData
-    : projectsData.filter(project => project.categories.includes(selectedCategory));
-
-
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projectsData
+      : projectsData.filter((project) =>
+          project.categories.includes(selectedCategory),
+        );
 
   return (
     <div
@@ -286,11 +309,9 @@ const Works = () => {
         </span>
       </h2>
       <div className="flex mb-5 gap-5 flex-wrap justify-center">
-        
-
         {Categories.map((category) => (
           <button
-            key={category}  
+            key={category}
             onClick={() => toggleCategory(category)}
             className={`
               ${selectedCategory === category ? "border-2 border-purple-400 bg-purple-400 text-black" : "bg-transparent border-2 border-purple-400 text-purple-400"}
