@@ -329,16 +329,28 @@ const ShimmerImage = ({ src, alt, className }) => {
 
 const Works = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const categoryCounts = projectsData.reduce(
+    (acc, project) => {
+      project.categories.forEach((category) => {
+        acc[category] = (acc[category] || 0) + 1;
+      });
+      return acc;
+    },
+    { All: projectsData.length } 
+  );
+
   const toggleCategory = (category) => {
     setSelectedCategory((prevCategory) =>
-      prevCategory === category ? null : category,
+      prevCategory === category ? null : category
     );
   };
+
   const filteredProjects =
     selectedCategory === "All"
       ? projectsData
       : projectsData.filter((project) =>
-          project.categories.includes(selectedCategory),
+          project.categories.includes(selectedCategory)
         );
 
   return (
@@ -362,7 +374,7 @@ const Works = () => {
               rounded-full py-3 px-6 flex items-center
               hover:bg-purple-400 hover:text-black transition duration-300`}
           >
-            {category}
+            {category} ({categoryCounts[category] || 0})
           </button>
         ))}
       </div>
