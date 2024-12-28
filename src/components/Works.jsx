@@ -137,7 +137,7 @@ const projectsData = [
     name: "React.js Toast Library",
     color: "bg-purple-900 bg-opacity-50",
     image: toastLibrary,
-    categories: ["Library", "TypeScript", "Frontend"],
+    categories: ["Library", "JavaScript", "Frontend"],
     technologies: [
       { name: "TypeScript", icon: <BiLogoTypescript /> },
       { name: "Node.js", icon: <FaNodeJs /> },
