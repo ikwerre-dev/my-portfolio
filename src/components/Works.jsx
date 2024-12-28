@@ -11,7 +11,11 @@ import {
   Link2Icon,
   Briefcase,
 } from "lucide-react";
-import { BiCaretRight, BiLogoTypescript } from "react-icons/bi";
+import {
+  BiCaretRight,
+  BiLogoTailwindCss,
+  BiLogoTypescript,
+} from "react-icons/bi";
 import launchpad from "../assets/sites/launchpad.png";
 import indulgetix from "../assets/sites/indulgetix.png";
 import sme from "../assets/sites/sme.png";
@@ -22,6 +26,7 @@ import veefa from "../assets/sites/veefa.png";
 import formNavigator from "../assets/sites/form-navigator.png";
 import toastLibrary from "../assets/sites/toast.png";
 import clanshare from "../assets/sites/clanshare.png";
+import photography from "../assets/sites/photography.png";
 import cryptowalletapp from "../assets/sites/cryptowalletapp.png";
 import { GrReactjs } from "react-icons/gr";
 import { DiGithub, DiJqueryLogo, DiNodejs } from "react-icons/di";
@@ -51,9 +56,10 @@ const ProjectCard = ({ project }) => {
         <div className="flex flex-col gap-8">
           <div className="lg:full">
             <div className="aspect-w-16 w-full md:h-[20rem] aspect-h-9 rounded-xl overflow-hidden">
-              <img
+            
+              <ShimmerImage
                 src={project.image}
-                alt={`${project.name} Website`}
+                alt={project.name}
                 className="object-cover w-full"
               />
             </div>
@@ -133,6 +139,19 @@ const ProjectCard = ({ project }) => {
 };
 
 const projectsData = [
+  {
+    name: "Photography Website",
+    color: "bg-purple-900 bg-opacity-50",
+    image: photography,
+    categories: ["JavaScript", "Frontend"],
+    technologies: [
+      { name: "Tailwind", icon: <BiLogoTailwindCss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Javascript", icon: <SiJavascript /> },
+    ],
+    link: "https://photography-app-topaz.vercel.app/",
+    githublink: "https://github.com/ikwerre-dev/Photography-app",
+  },
   {
     name: "React.js Toast Library",
     color: "bg-purple-900 bg-opacity-50",
@@ -282,6 +301,31 @@ const Categories = [
   "Backend",
   "Extensions",
 ];
+const ShimmerImage = ({ src, alt, className }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  return (
+    <div className="relative w-full h-full overflow-hidden">
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse">
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-shimmer"
+            style={{
+              backgroundSize: "200% 100%",
+              animation: "shimmer 2s infinite linear",
+            }}
+          />
+        </div>
+      )}
+      <img
+        src={src}
+        alt={alt}
+        className={`${className} ${isLoading ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+        onLoad={() => setIsLoading(false)}
+      />
+    </div>
+  );
+};
 
 const Works = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");

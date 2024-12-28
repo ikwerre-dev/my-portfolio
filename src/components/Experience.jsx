@@ -67,7 +67,7 @@ const ExperiencesCard = ({ company, location, flag, logo, period, role, responsi
   <div className="bg-purple-300 bg-opacity-30 rounded-3xl p-6 flex my-5 flex-col justify-between h-full">
     <div>
       <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
-        <button className="bg-purple-300 bg-opacity-20 text-black pr-2 py-2 h-[4rem] pl-[3.5rem] rounded-full md:w-1/5 relative flex items-center">
+        <button className="bg-purple-300 bg-opacity-20 text-black pr-2 py-2 h-[4rem] pl-[3.5rem] rounded-full  relative flex items-center">
           <div className="flex flex-col items-start justify-center">
             <span className="mx-4 text-lg font-gluten text-purple-400">{company}</span>
             <span className="mx-4 text-white text-sm font-sora flex space-between gap-1">
@@ -102,7 +102,7 @@ const Experiences = () => {
         Experiences
         <span className="absolute -top-4 -left-7 text-purple-400/20 text-5xl md:text-7xl">Experiences</span>
       </h2>
-      <div className="grid grid-cols-1 gap-6 max-w-7xl my-5 w-full">
+      <div className="grid md:grid-cols-2 gap-6 max-w-7xl my-5 w-full">
         {experiencesData.map((experience, index) => (
           <ExperiencesCard key={index} {...experience} />
         ))}
