@@ -1,12 +1,9 @@
-import React from 'react';
-import { Calendar, Laptop, MapPin, Star } from 'lucide-react';
-import user from '../assets/user.png';
+import { Calendar, Laptop, MapPin } from 'lucide-react';
 import pxxl from '../assets/pxxl.png';
 import indulgetixlogo from '../assets/sites/indulgetixlogo.png';
 import igs from '../assets/sites/igs.png';
 import organstation from '../assets/sites/organstation.png';
 import developer from '../assets/developer.png';
-import { BiCaretRight } from 'react-icons/bi';
 
 const experiencesData = [
   {

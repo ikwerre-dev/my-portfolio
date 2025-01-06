@@ -28,6 +28,7 @@ import toastLibrary from "../assets/sites/toast.png";
 import clanshare from "../assets/sites/clanshare.png";
 import photography from "../assets/sites/photography.png";
 import cryptowalletapp from "../assets/sites/cryptowalletapp.png";
+import ondepay from "../assets/sites/ondepay.png";
 import { GrReactjs } from "react-icons/gr";
 import { DiGithub, DiJqueryLogo, DiNodejs } from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
@@ -56,7 +57,6 @@ const ProjectCard = ({ project }) => {
         <div className="flex flex-col gap-8">
           <div className="lg:full">
             <div className="aspect-w-16 w-full md:h-[20rem] aspect-h-9 rounded-xl overflow-hidden">
-            
               <ShimmerImage
                 src={project.image}
                 alt={project.name}
@@ -139,6 +139,18 @@ const ProjectCard = ({ project }) => {
 };
 
 const projectsData = [
+  {
+    name: "Ondepay Virtual Card",
+    color: "bg-purple-900 bg-opacity-50",
+    image: ondepay,
+    categories: ["TypeScript", "Frontend"],
+    technologies: [
+      { name: "Tailwind", icon: <BiLogoTailwindCss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Typescript", icon: <BiLogoTypescript /> },
+    ],
+    link: "https://ondepay-ng3t.vercel.app/",
+  },
   {
     name: "Photography Website",
     color: "bg-purple-900 bg-opacity-50",
@@ -337,12 +349,12 @@ const Works = () => {
       });
       return acc;
     },
-    { All: projectsData.length } 
+    { All: projectsData.length },
   );
 
   const toggleCategory = (category) => {
     setSelectedCategory((prevCategory) =>
-      prevCategory === category ? null : category
+      prevCategory === category ? null : category,
     );
   };
 
@@ -350,7 +362,7 @@ const Works = () => {
     selectedCategory === "All"
       ? projectsData
       : projectsData.filter((project) =>
-          project.categories.includes(selectedCategory)
+          project.categories.includes(selectedCategory),
         );
 
   return (
