@@ -1,21 +1,6 @@
-import React, { useState } from "react";
-import {
-  Calendar,
-  Laptop,
-  MapPin,
-  Star,
-  Link2,
-  Info,
-  Github,
-  GithubIcon,
-  Link2Icon,
-  Briefcase,
-} from "lucide-react";
-import {
-  BiCaretRight,
-  BiLogoTailwindCss,
-  BiLogoTypescript,
-} from "react-icons/bi";
+import { useState } from "react";
+import { Link2, GithubIcon, Link2Icon, Briefcase } from "lucide-react";
+import { BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi";
 import launchpad from "../assets/sites/launchpad.png";
 import indulgetix from "../assets/sites/indulgetix.png";
 import sme from "../assets/sites/sme.png";
@@ -29,11 +14,12 @@ import clanshare from "../assets/sites/clanshare.png";
 import photography from "../assets/sites/photography.png";
 import cryptowalletapp from "../assets/sites/cryptowalletapp.png";
 import ondepay from "../assets/sites/ondepay.png";
+import fundme from "../assets/sites/fundme.png";
 import { GrReactjs } from "react-icons/gr";
-import { DiGithub, DiJqueryLogo, DiNodejs } from "react-icons/di";
+import { DiJqueryLogo } from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa6";
-import { SiExpo, SiJavascript, SiRsocket, SiTailwindcss } from "react-icons/si";
+import { SiExpo, SiJavascript, SiTailwindcss } from "react-icons/si";
 import { MdPhp } from "react-icons/md";
 
 const ProjectCard = ({ project }) => {
@@ -139,6 +125,18 @@ const ProjectCard = ({ project }) => {
 };
 
 const projectsData = [
+  {
+    name: "Fundme: Fundraiser App",
+    color: "bg-purple-900 bg-opacity-50",
+    image: fundme,
+    categories: ["TypeScript", "Frontend"],
+    technologies: [
+      { name: "Tailwind", icon: <BiLogoTailwindCss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Typescript", icon: <BiLogoTypescript /> },
+    ],
+    link: "http://fund-me-pro.vercel.app/",
+  },
   {
     name: "Ondepay Virtual Card",
     color: "bg-purple-900 bg-opacity-50",
