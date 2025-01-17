@@ -11,10 +11,12 @@ import veefa from "../assets/sites/veefa.png";
 import formNavigator from "../assets/sites/form-navigator.png";
 import toastLibrary from "../assets/sites/toast.png";
 import clanshare from "../assets/sites/clanshare.png";
+import rewrap from "../assets/sites/rewrap.png";
 import photography from "../assets/sites/photography.png";
 import cryptowalletapp from "../assets/sites/cryptowalletapp.png";
 import ondepay from "../assets/sites/ondepay.png";
 import fundme from "../assets/sites/fundme.png";
+import celebportfolio from "../assets/sites/celeb-portfolio.png";
 import { GrReactjs } from "react-icons/gr";
 import { DiJqueryLogo } from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
@@ -126,6 +128,19 @@ const ProjectCard = ({ project }) => {
 
 const projectsData = [
   {
+    name: "Rewrap: Js/Ts CLI Tool",
+    color: "bg-purple-900 bg-opacity-50",
+    image: rewrap,
+    categories: ["JavaScript", "Collaboration"],
+    technologies: [
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Javascript", icon: <SiJavascript /> },
+      { name: "Typescript", icon: <BiLogoTypescript /> },
+    ],
+    link: "https://rewrap.vercel.app/",
+    githublink: "https://github.com/heycalebszn/Rewrap-",
+  },
+  {
     name: "Fundme: Fundraiser App",
     color: "bg-purple-900 bg-opacity-50",
     image: fundme,
@@ -148,6 +163,32 @@ const projectsData = [
       { name: "Typescript", icon: <BiLogoTypescript /> },
     ],
     link: "https://ondepay-ng3t.vercel.app/",
+  },
+  {
+    name: "Musician Portfolio",
+    color: "bg-purple-900 bg-opacity-50",
+    image: celebportfolio,
+    categories: ["JavaScript", "Frontend"],
+    technologies: [
+      { name: "Tailwind", icon: <BiLogoTailwindCss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Typescript", icon: <BiLogoTypescript /> },
+    ],
+    link: "https://lainey-wilson.vercel.app/",
+    githublink: "https://github.com/ikwerre-dev/Musician-Portfolio",
+  },
+  {
+    name: "Photography Website",
+    color: "bg-purple-900 bg-opacity-50",
+    image: celebportfolio,
+    categories: ["JavaScript", "Frontend"],
+    technologies: [
+      { name: "Tailwind", icon: <BiLogoTailwindCss /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Javascript", icon: <SiJavascript /> },
+    ],
+    link: "https://photography-app-topaz.vercel.app/",
+    githublink: "https://github.com/ikwerre-dev/Photography-app",
   },
   {
     name: "Photography Website",
@@ -309,7 +350,7 @@ const Categories = [
   "Mobile",
   "Frontend",
   "Backend",
-  "Extensions",
+  "Collaboration",
 ];
 const ShimmerImage = ({ src, alt, className }) => {
   const [isLoading, setIsLoading] = useState(true);
