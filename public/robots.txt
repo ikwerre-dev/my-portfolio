@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /private/
-Sitemap: https://robinsonhonour.me/sitemap.xml
+Disallow:
