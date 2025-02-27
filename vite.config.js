@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     Sitemap({
-      hostname: "https://robinsonhonour.me",
+      hostname: "https://my-portfolio-git-main-ikwerredevs-projects.vercel.app",
       dynamicRoutes: ["/"],
       robotsTxt: true, 
 
