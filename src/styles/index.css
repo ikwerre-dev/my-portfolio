@@ -51,11 +51,11 @@ html {
 
 @font-face {
   font-family: clash;
-  src: url("../fonts/clash/ClashDisplay-Regular.otf") format("opentype");
+  src: url("/fonts/clash/ClashDisplay-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: clashBold;
-  src: url("../fonts/clash/ClashDisplay-Semibold.otf") format("opentype");
+  src: url("/fonts/clash/ClashDisplay-Semibold.otf") format("opentype");
 }
 
 @-webkit-keyframes slime {
