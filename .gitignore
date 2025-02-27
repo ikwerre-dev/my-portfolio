@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# test.jsx
+# .bin
+
+
+# lock files
+package-lock.json
+yarn.lock
+bun.lockb

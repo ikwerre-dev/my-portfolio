@@ -1,24 +1,103 @@
-import { Menu, Sun } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Copyright, FbIcon, IgIcon, InIcon, TwIcon } from "./svgs";
 
-function Footer() {
-    return (
-        <div className="w-full flex flex-col  items-center">
-             <footer className="flex md:w-3/4 justify-between mx-5 md:mx-0 items-center py-2 md:py-3 px-3 md:px-3 text-white bg-purple-500 mb-8 md:mb-10 rounded rounded-[5rem]">
-                 
-                <button className="bg-purple-500 text-black pl-2 py-2 h-[4rem]  md:h-[4rem] pl-[2.5rem] md:pl-[3.5rem] rounded-full relative flex items-center">
-                    <span className="mx-4 text-sm md:text-2xl text-black font-gluten">ROBINSON HONOUR</span>
-                    <div className="bg-black font-gluten pt-1 text-white text-lg md:text-2xl h-[3rem] md:h-[4rem] w-[3rem] md:w-[4rem] left-0 rounded absolute rounded-full flex align-center items-center justify-center">
-                        RH
-                    </div>
-                </button>
-                <div className="flex items-center">
+const Footer = () => {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-                <span className="mx-4 text-sm md:text-2xl text-black font-gluten">Designed and Built by Robinson Honour</span>
-                </div>
-            </footer>
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section className="mx-[30px] mt-[60px] pb-[20px] lg:pb-[50px] lg:mx-[76px] lg:mt-[150px]">
+      {/* line */}
+      <div className="lg:max-w-[13000px] lg:mx-[71px] h-[2px] mt-[63.37px] bg-[#170928]"></div>
+      <div className="mt-[63px] flex flex-col-reverse justify-start gap-5 md:gap-0 md:flex md:flex-row md:justify-between md:items-center ">
+        <div className="flex flex-col justify-start items-start">
+          <div className="flex flex-row items-center lg:gap-[4px]">
+            <span>
+              <Copyright className="size-[18px] md:size-[20px]" />
+            </span>
+            <p className={`text-[#FFFFFF99] md:text-xl text-lg font-medium`}>
+              Honour
+              <span className="text-[#FFFFFF] text-[14px] lg:text-base">
+                {" "}
+                53 BC -
+              </span>{" "}
+              <span className="text-[#FFFFFF] text-[14px] lg:text-base">
+                {new Date().getFullYear()}
+              </span>
+            </p>
+          </div>
+          <p className="text-[#FFFFFF99] transition-all duration-300 text-end text-sm lg:text-base mt-1">
+            {time}
+          </p>
         </div>
+        <div className="mt-[10px] md:mt-[65px] flex justify-start items-center gap-[20px] md:gap-[40px]">
+          <motion.a
+            href="https://www.facebook.com/honour.robinson.1"
+            target="_blank"
+            rel="noreferrer"
+            whileTap={{ scale: 1.1 }}
+            whileHover={{ scale: 0.99 }}
+            className="h-auto w-auto"
+          >
+            <FbIcon
+              fill={`#FFFFFF99`}
+              className={`w-[30px] h-[30px] rounded-full border-[#FFFFFF99] border-solid border-[2px] p-0.5  transition-all duration-500 hover:bg-gray-500`}
+            />
+          </motion.a>
+          <motion.a
+            href="https://x.com/honour_can_code"
+            target="_blank"
+            rel="noreferrer"
+            whileTap={{ scale: 1.1 }}
+            whileHover={{ scale: 0.99 }}
+            className="h-auto w-auto"
+          >
+            <TwIcon
+              fill="#FFFFFF99"
+              className={`w-[30px] h-[30px] rounded-full border-[#FFFFFF99] border-solid border-[2px] p-1  transition-all duration-500 hover:bg-gray-500`}
+            />
+          </motion.a>
+          <motion.a
+            href="https://www.instagram.com/robinsonhonour"
+            target="_blank"
+            rel="noreferrer"
+            whileTap={{ scale: 1.1 }}
+            whileHover={{ scale: 0.99 }}
+            className="h-auto w-auto"
+          >
+            <IgIcon
+              fill={`#FFFFFF99`}
+              className={`w-[30px] h-[30px] rounded-full border-[#FFFFFF99] border-solid border-[2px] p-0.5  transition-all duration-500 hover:bg-gray-500`}
+            />
+          </motion.a>
+          <motion.a
+            href="https://ng.linkedin.com/in/robinsonhonouramadi"
+            target="_blank"
+            rel="noreferrer"
+            whileTap={{ scale: 1.1 }}
+            whileHover={{ scale: 0.99 }}
+            className="h-auto w-auto"
+          >
+            <InIcon
+              fill={`#FFFFFF99`}
+              className="w-[30px] h-[30px] rounded-full border-[#FFFFFF99] border-solid border-[2px] p-0.5  transition-all duration-700 hover:bg-gray-500"
+            />
+          </motion.a>
+        </div>
+      </div>
 
-    )
-}
+
+    </section>
+  );
+};
 
 export default Footer;

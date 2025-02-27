@@ -1,20 +1,28 @@
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      keyframes: {
-        'barrel-roll-x': {
-          '0%': { transform: 'rotateX(0deg)' },
-          '100%': { transform: 'rotateX(360deg)' },
-        },
+      fontFamily: {
+        pop: ['Poppins', "sans-serif"],
+        clash: ["clash", "sans-serif"],
+        clashbold: ["clashBold", "sans-serif"]
       },
-      animation: {
-        'barrel-roll-x': 'barrel-roll-x 20s linear infinite', // Adjust the duration (4s) for speed
+      screens: {
+        sm: "576px",
+        md: "768px",
+        lg: "992px",
+        xl: "1220px",
+        xxl: "1400px",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // require('tailwindcss'),
+    // require('tailwindcss-gradients'),
+    // require('tailwindcss-border-gradient'),
+  ],
 }

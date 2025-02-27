@@ -1,15 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import "@fontsource/sora";
-import '@fontsource/coda-caption';
-import '@fontsource/luckiest-guy';
-import '@fontsource-variable/gluten';
-import '@fontsource/roboto';
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import App from "./App.jsx";
+import "./styles/index.css";
+import ReactDOM from "react-dom/client";
+import { inject } from "@vercel/analytics";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
+inject();

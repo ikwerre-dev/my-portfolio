@@ -1,47 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/png" href="/src/assets/favicon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Robinson Honour Amadi</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" sizes="24x24" />
+    <!-- <link rel="icon" type="image/svg+xml" href="./src/assets/images/favicon.png" sizes="24x24" /> -->
+    <meta
+      name="description"
+      content="I enjoy creating frontend solutions with solid foundations, scalability, and excellent user experiences."
+    />
+    <meta
+      name="keywords"
+      content="Victor Olatunji, Honour, Honour-coder, Honourdev, Software engineer, Creative Frontend developer, Portfolio, Honour.dev"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta
-            name="description"
-            content="I'm Robinson Honour Amadi, an 18-year-old tech enthusiast with a profound passion for the digital realm. With over 6 years of experience, I've immersed myself in web and app development, robotics, cloud computing, and game development. As a resource personnel for Airobot and a tech content creator, I share my expertise at events like the Young Techies Festival to inspire and educate others in the field."
-        />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://Honour.vercel.app" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Victor || Honour - Creative Frontend Engineer"
+    />
+    <meta
+      property="og:description"
+      content="I enjoy creating frontend
+    solutions with solid foundations, scalability, and excellent user
+    experiences."
+    />
+    <meta
+      property="og:image"
+      content="/images/hero.png"
+    />
 
-        <meta
-            name="keywords"
-            content="Robinson Honour Amadi, tech enthusiast, web development, app development, robotics, cloud computing, game development, tech content creator, Young Techies Festival, Airobot, Bonny Island, tech projects, speaker, digital innovation"
-        />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="Honour.vercel.app" />
+    <meta property="twitter:url" content="https://Honour.vercel.app" />
+    <meta
+      name="twitter:title"
+      content="Victor || Honour - Creative Frontend Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="I enjoy creating frontend
+    solutions with solid foundations, scalability, and excellent user
+    experiences."
+    />
+    <meta
+      name="twitter:image"
+      content="/images/hero.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="lg:bg-blue-950s md:bg-red-300s bg-yellow-400s">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
 
-        <meta
-            property="og:title"
-            content="Robinson Honour Amadi - Tech Enthusiast and Innovator"
-        />
-        <meta
-            property="og:description"
-            content="I am an 18-year-old tech enthusiast with 6+ years of experience in web and app development, robotics, cloud computing, and more. Passionate about innovation, I share insights as a tech content creator and speaker at events like the Young Techies Festival."
-        />
-        <meta property="og:image" content="/src/assets/favicon.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://robinsonhonour.me" />
+      // Whenever the user explicitly chooses light mode
+      localStorage.theme = "light";
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Robinson Honour Amadi - Tech Enthusiast and Innovator"
-        />
-        <meta
-            name="twitter:description"
-            content="I am an 18-year-old tech enthusiast with 6+ years of experience in various fields of technology. I share my expertise through content creation and tech events."
-        />
-        <meta name="twitter:image" content="/src/assets/favicon.png" />
-    </head>
+      // Whenever the user explicitly chooses dark mode
+      localStorage.theme = "dark";
 
-    <body>
-        <div id="root"></div>
-        <script type="module" src="/src/main.jsx"></script>
-    </body>
+      // Whenever the user explicitly chooses to respect the OS preference
+      localStorage.removeItem("theme");
+    </script>
+  </body>
 </html>
