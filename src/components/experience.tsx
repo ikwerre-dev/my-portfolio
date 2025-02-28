@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Experience = () => {
   return (
     <section className="relative pt-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#170928] via-[#170928]/80 to-transparent opacity-30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#130b1c] via-[#130b1c]/80 to-transparent opacity-30" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <motion.div
@@ -86,7 +86,7 @@ const Experience = () => {
                   whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="w-5 h-5 rounded-full bg-[#170928] border-2 border-[#6f1cd7] shadow-lg shadow-[#6f1cd7]/20" />
+                  <div className="w-5 h-5 rounded-full bg-[#130b1c] border-2 border-[#6f1cd7] shadow-lg shadow-[#6f1cd7]/20" />
                 </motion.div>
 
                 <motion.div
@@ -94,7 +94,7 @@ const Experience = () => {
                     scale: 1.02,
                     backgroundColor: 'rgba(111, 28, 215, 0.08)'
                   }}
-                  className="group relative bg-[#170928]/60 backdrop-blur-sm border border-[#ffffff08] p-8 rounded-sm transition-all duration-500"
+                  className="group relative bg-[#130b1c]/60 backdrop-blur-sm border border-[#ffffff08] p-8 rounded-sm transition-all duration-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-[#6f1cd7]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 

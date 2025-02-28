@@ -90,7 +90,7 @@ const Services = () => {
                                 translateY: -5,
                                 boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
                             }}
-                            className="group relative bg-[#170928]/80 backdrop-blur-lg rounded-lg overflow-hidden border border-[#ffffff10]"
+                            className="group relative bg-[#130b1c]/80 backdrop-blur-lg rounded-lg overflow-hidden border border-[#ffffff10]"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

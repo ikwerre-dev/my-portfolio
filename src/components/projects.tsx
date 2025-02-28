@@ -7,7 +7,7 @@ import { projects } from "../data/data";
 const Projects = () => {
     return (
         <section className="relative py-24 px-4 md:px-8 lg:px-16 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#170928] to-transparent opacity-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#130b1c] to-transparent opacity-40" />
 
             <div className="max-w-7xl mx-auto relative">
                 <motion.div
@@ -34,7 +34,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group relative bg-[#170928]/80 backdrop-blur-lg rounded-lg overflow-hidden border border-[#ffffff10]"
+                            className="group relative bg-[#130b1c]/80 backdrop-blur-lg rounded-lg overflow-hidden border border-[#ffffff10]"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
