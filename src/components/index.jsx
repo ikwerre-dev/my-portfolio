@@ -8,5 +8,4 @@ export { default as Contact } from "./contact";
 export { default as Services } from "./services";
 export { default as Projects } from "./projects";
 export { default as Experience } from "./experience";
-
-// not exporting SVGs from here, it has a lot of exports in tit.
+ 
