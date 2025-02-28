@@ -23,9 +23,10 @@ const Resume = ({ pdfUrl, fileName, buttonText }: ResumeProps) => {
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(blobUrl);
-    } catch (error: any) {
-      toast.error(`Error downloading PDF: ${error.message}`);
-      console.error("Error downloading PDF:", error.message);
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      toast.error(`Error downloading PDF: ${errorMessage}`);
+      console.error("Error downloading PDF:", errorMessage);
     }
   };
 

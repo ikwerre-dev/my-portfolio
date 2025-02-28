@@ -1,7 +1,6 @@
 'use client'
 
 import Resume from "./resume";
-import { ExpCircle } from "./svgs";
 const resumeUrl = '/pdf/resume.pdf'; 
 import { motion } from "framer-motion";
 
