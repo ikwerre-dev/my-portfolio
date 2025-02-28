@@ -9,7 +9,9 @@ export default defineConfig({
       hostname: "https://my-portfolio-git-main-ikwerredevs-projects.vercel.app",
       dynamicRoutes: ["/"],
       outDir: './dist',
-      robots: false, // Use 'robots' instead of 'robotsTxt'
+      robots: false,
+      exclude: [], // Add empty exclude array
+      urls: ["/"] // Add explicit URLs array
     }),
   ],
 });
