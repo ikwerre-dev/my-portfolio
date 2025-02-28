@@ -8,7 +8,8 @@ export default defineConfig({
     Sitemap({
       hostname: "https://my-portfolio-git-main-ikwerredevs-projects.vercel.app",
       dynamicRoutes: ["/"],
-      robotsTxt: false, // Set to false to disable robots.txt generation
+      outDir: './dist',
+      robots: false, // Use 'robots' instead of 'robotsTxt'
     }),
   ],
 });
