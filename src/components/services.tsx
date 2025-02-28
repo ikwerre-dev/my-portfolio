@@ -102,11 +102,11 @@ const Services = () => {
                                     <div className="h-px w-16 bg-gradient-to-r from-purple-500 to-blue-500 opacity-50" />
                                 </div>
 
-                                <h3 className="text-white text-xl md:text-2xl font-clashbold mb-4 tracking-wide">
+                                <h3 className="text-white text-xl  font-clashbold mb-4 tracking-wide">
                                     {service.title}
                                 </h3>
 
-                                <p className="text-[#FFFFFF99] text-sm md:text-base leading-relaxed">
+                                <p className="text-[#FFFFFF99] text-sm leading-relaxed">
                                     {service.description}
                                 </p>
                             </div>

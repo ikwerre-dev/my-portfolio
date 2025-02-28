@@ -29,6 +29,15 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #0b040c;
   color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.font-clashbold {
+  font-family: clashBold;
+  font-weight: bold;
+}
+
+.font-clash {
   font-family: clash;
 }
 
@@ -66,14 +75,15 @@ body {
 
 .gradientText h1 {
   @apply font-semibold text-[34px] leading-[36.9px] text-[#CFFAFF] md:leading-[45px] md:text-[35px] md:max-w-max lg:leading-[73.8px] lg:max-w-[580px] lg:text-[60px];
-  font-family: clash;
+  font-family: clashBold;
   color: rgba(255, 255, 255, 0);
   text-transform: capitalize;
+
 }
 
 .gradientText h2 {
   color: rgba(255, 255, 255, 0);
   text-transform: capitalize;
-  font-family: clashBold;
+  font-family: clash;
   @apply flex items-center font-semibold text-white text-[20px] leading-[30.75px] lg:text-[60px] lg:leading-[73.8px];
 }
