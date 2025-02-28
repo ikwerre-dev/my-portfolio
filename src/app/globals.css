@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@font-face {
+  font-family: clash;
+  src: url("/fonts/clash/ClashDisplay-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: clashBold;
+  src: url("/fonts/clash/ClashDisplay-Semibold.otf") format("opentype");
+}
+
+html {
+  scrollbar-color: rgb(0, 0, 0, 0.4) rgb(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+body {
+
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0b040c;
+  color: white;
+  font-family: clash;
+}
+
+.gradientText {
+  overflow: hidden;
+  background: linear-gradient(76deg,
+      #fde1ff,
+      #e0e7ff,
+      #e0f9ff,
+      #fffae9,
+      #e8eaff,
+      #ffe3f7,
+      #daf1ff,
+      #fde1ff,
+      #e0e7ff,
+      #e0f9ff,
+      #fffae9,
+      #e8eaff,
+      #ffe3f7,
+      #daf1ff,
+      #fde1ff,
+      #e0e7ff,
+      #e0f9ff,
+      #fffae9,
+      #e8eaff,
+      #ffe3f7,
+      #daf1ff);
+  background-size: 500% 500%;
+  -webkit-animation: slime 45s ease infinite;
+  animation: slime 45s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+.gradientText h1 {
+  @apply font-semibold text-[34px] leading-[36.9px] text-[#CFFAFF] md:leading-[45px] md:text-[35px] md:max-w-max lg:leading-[73.8px] lg:max-w-[580px] lg:text-[60px];
+  font-family: clash;
+  color: rgba(255, 255, 255, 0);
+  text-transform: capitalize;
+}
+
+.gradientText h2 {
+  color: rgba(255, 255, 255, 0);
+  text-transform: capitalize;
+  font-family: clashBold;
+  @apply flex items-center font-semibold text-white text-[20px] leading-[30.75px] lg:text-[60px] lg:leading-[73.8px];
+}

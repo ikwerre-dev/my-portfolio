@@ -1,5 +1,7 @@
+'use client'
 import { motion } from "framer-motion";
 import { FbIcon, IgIcon, InIcon, TwIcon } from "./svgs";
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -8,9 +10,7 @@ const Hero = () => {
         <div className="flex flex-col items-start flex-1 md:flex md:flex-row md:gap-10 md:items-center lg:flex lg:flex-row lg:items-center lg:gap-x-12 lg:justify-between">
           <div>
             <div className="gradientText">
-              <h1
-              // className={`font-clashbold font-semibold text-[40px] leading-[36.9px] text-[#CFFAFF] md:leading-[4 5px] md:text-[35px] md:max-w-max lg:leading-[73.8px] lg:max-w-[580px] lg:text-[60px] `}
-              >
+              <h1>
                 Creative Software Engineer<span>.</span>
               </h1>
             </div>
@@ -89,12 +89,14 @@ const Hero = () => {
           <div className="mt-[2.5rem]">
             <div className="relative flex flex-col justify-center w-max">
               <div className={`w-full`}>
-                <img
+                <Image
                   src="/images/hero.png"
-                  alt="hero image is here"
+                  alt="hero image"
+                  width={400}
+                  height={400}
                   className="absolute w-full h-full bottom-3 right-4 md:bottom-5 md:right-6 lg:bottom-10 lg:right-12"
                   draggable={false}
-                  loading="lazy"
+                  priority
                 />
               </div>
               <motion.div
@@ -102,23 +104,6 @@ const Hero = () => {
               ></motion.div>
             </div>
           </div>
-          {/* <div className="flex flex-col items-center mt-[60px] md:mt-0">
-            <div className="relative">
-              <motion.div whileHover={{}}>
-                <img
-                  src={hero}
-                  alt="hero image is here"
-                  className="w-[330px] h-[330px] mg:w-3/4 lg:w-[512px] lg:h-[512px] absolute bottom-[32px] -left-[36px] md:bottom-[52px] md:right-[56px] object-cover"
-                  draggable={false}
-                  loading="lazy"
-
-                />
-              </motion.div>
-              <div
-                className={`max-w-[330px] min-h-[330px] md:w-[200px] lg:min-w-[512px] lg:min-h-[512px] border-[#6f1cd7] border-[3px] border-solid`}
-              ></div>
-            </div>
-          </div> */}
         </div>
       </section>
     </>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+"use client"
 import { useState, useEffect } from "react";
 import { LocationIcon, MailIcon, PhoneIcon } from "./svgs";
 
@@ -6,7 +6,6 @@ const Contact = () => {
   const [timeOfDay, setTimeOfDay] = useState(getTimeOfDay());
 
   useEffect(() => {
-    // Update timeOfDay when component mounts
     setTimeOfDay(getTimeOfDay());
   }, []);
 

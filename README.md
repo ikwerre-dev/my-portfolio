@@ -1,51 +1,36 @@
-# Honour - Personal Portfolio Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-![Honour's Portfolio Screenshot](./public/images/cover.png)
+## Getting Started
 
-Welcome to my personal portfolio! This project showcases my frontend development skills and projects I've worked on. Feel free to explore the different sections to learn more about me and my work.
+First, run the development server:
 
-## Technologies Used
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- React.js: A popular JavaScript library for building user interfaces.
-- Tailwind CSS: A utility-first CSS framework for rapidly styling web applications.
-- React Router: A library for managing routing and navigation in a React application.
-- Framer Motion: A motion library for creating smooth animations and transitions.
-- React Icons: A library providing a wide range of icons for your projects.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Features
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Responsive design: The portfolio is fully responsive to ensure a seamless experience on       different devices.
-- Smooth animations: Framer Motion is used to add elegant animations and transitions.
-- Easy navigation: React Router allows for smooth navigation between different sections of the portfolio.
-- Project showcase: A dedicated section to showcase my projects with descriptions and links.
-- Contact information: Users can easily get in touch with me through provided contact details.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Installation and Setup
+## Learn More
 
-1.  Fork
-2.  Clone the forked repository to your local machine using `git clone`.
-3.  Navigate to the project directory: `cd Honour`.
-4.  Install project dependencies using `npm install`.
-5.  Start the development server: `npm run dev`.
-6.  Open your web browser and navigate to `http://localhost:5173` to view the portfolio.
+To learn more about Next.js, take a look at the following resources:
 
-## Usage
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Feel free to customize this portfolio to showcase your own projects and skills. Update the project descriptions, images, and links to match your work. Shout out is important too.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Contact
+## Deploy on Vercel
 
-If you have any questions or would like to get in touch, you can reach me at:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- Email: victoluolatunji@gmail.com
-- GitHub: [Vitorola-coder](https://github.com/Victorla-coder)
-- Portfolio: [preview](https://www.Honour.dev)
-
-## Todos
-
-- add few sleazy animation.
-- change the experience section into an array and map it.
-- change the services section into an array and map it.
-- 404 page - done ✔✔
-
-Thank you for visiting my portfolio repository!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

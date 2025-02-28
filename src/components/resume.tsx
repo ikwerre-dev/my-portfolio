@@ -1,43 +1,30 @@
+'use client';
 import toast, { Toaster } from "react-hot-toast";
 
-const Resume = ({ pdfUrl, fileName, buttonText }) => {
-  const notify = () => toast("Here is your toast.");
+interface ResumeProps {
+  pdfUrl: string;
+  fileName: string;
+  buttonText?: string;
+}
+
+const Resume = ({ pdfUrl, fileName, buttonText }: ResumeProps) => {
   const downloadPDF = async () => {
     try {
-      // Fetch the PDF file
       const response = await fetch(pdfUrl);
-
-      // Check if the request was successful
       if (!response.ok) {
         throw new Error(`Failed to fetch PDF: ${response.statusText}`);
       }
-
-      // Convert the response to a blob
       const blob = await response.blob();
-
-      // Create a download link
       const link = document.createElement("a");
-
-      // Create a Blob URL from the blob
       const blobUrl = URL.createObjectURL(blob);
-
-      // Set the download link attributes
       link.href = blobUrl;
       link.download = fileName || "download.pdf";
-
-      // Append the link to the document
       document.body.appendChild(link);
-
-      // Trigger a click on the link to start the download
       link.click();
-
-      // Remove the link from the document
       document.body.removeChild(link);
-
-      // Revoke the Blob URL to free up resources
       URL.revokeObjectURL(blobUrl);
-    } catch (error) {
-      notify("Error downloading PDF", error.message);
+    } catch (error: any) {
+      toast.error(`Error downloading PDF: ${error.message}`);
       console.error("Error downloading PDF:", error.message);
     }
   };

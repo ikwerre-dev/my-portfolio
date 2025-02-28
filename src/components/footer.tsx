@@ -1,23 +1,34 @@
+"use client"
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Copyright, FbIcon, IgIcon, InIcon, TwIcon } from "./svgs";
 
 const Footer = () => {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const [time, setTime] = useState<string>('');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date().toLocaleTimeString());
-    }, 1000);
-
+    setMounted(true);
+    const updateTime = () => {
+      setTime(new Date().toLocaleTimeString('en-US', {
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      }));
+    };
+    
+    updateTime(); // Initial call
+    const timer = setInterval(updateTime, 1000);
     return () => clearInterval(timer);
   }, []);
 
+  // Return empty time string during server-side rendering
+  const displayTime = mounted ? time : '';
+
   return (
     <section className="mx-[30px] mt-[60px] pb-[20px] lg:pb-[50px] lg:mx-[76px] lg:mt-[150px]">
-      {/* line */}
-      <div className="lg:max-w-[13000px] lg:mx-[71px] h-[2px] mt-[63.37px] bg-[#170928]"></div>
+       <div className="lg:max-w-[13000px] lg:mx-[71px] h-[2px] mt-[63.37px] bg-[#170928]"></div>
       <div className="mt-[63px] flex flex-col-reverse justify-start gap-5 md:gap-0 md:flex md:flex-row md:justify-between md:items-center ">
         <div className="flex flex-col justify-start items-start">
           <div className="flex flex-row items-center lg:gap-[4px]">
@@ -36,7 +47,7 @@ const Footer = () => {
             </p>
           </div>
           <p className="text-[#FFFFFF99] transition-all duration-300 text-end text-sm lg:text-base mt-1">
-            {time}
+            {displayTime}
           </p>
         </div>
         <div className="mt-[10px] md:mt-[65px] flex justify-start items-center gap-[20px] md:gap-[40px]">
