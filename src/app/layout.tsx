@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Robinson Honour Amadi',
+    title: 'Robinson Honour ',
   },
 };
 
