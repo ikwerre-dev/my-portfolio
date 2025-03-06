@@ -23,7 +23,7 @@ const Hero = () => {
               className="text-[#F0FEFF] font-pop flex-shrink-0 text-[.9em] leading-[1.5] font-medium mt-[40px] flex flex-col gap-8 md:flex md:flex-col md:gap-[20px] md:mt-[45px] lg:flex lg:flex-row lg:items-start lg:gap-[12px]"
             >
               <p className="max-w-[310px]">
-                I&#39;m Robinson Honour, with 6+ Years of experience. Started coding in 2017, specializing in web development,
+                I&#39;m Robinson Honour, 19, with 6+ Years of experience. Started coding in 2017, specializing in web development,
                 app development, robotics, cloud computing, and game development.
               </p>
               <p className="max-w-[319px]">
