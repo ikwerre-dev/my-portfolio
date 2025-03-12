@@ -15,8 +15,7 @@ const Hero = () => {
               </h1>
             </div>
             <p className="gradientText font-medium font-pop text-[15px] text-[#FFFFFF99] max-w-[353px] mt-[45px] md:mt-8 lg:mt-1 md:max-w-[639px] md:text-[18px] leading-md:[27px]">
-              I like to craft solid and scalable products with great
-              user experiences.
+              I like to craft solid and scalable products with great user experiences.
             </p>
             <div
               id="intro"
