@@ -84,7 +84,8 @@ const Services = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: service.id * 0.1 }}
+                            transition={{ duration: 0.3, delay: service.id * 0.05 }}
+
                             whileHover={{
                                 scale: 1.02,
                                 translateY: -5,

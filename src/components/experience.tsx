@@ -24,7 +24,7 @@ const Experience = () => {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-8 md:left-12 top-0 w-[1px] h-full bg-gradient-to-b from-[#6f1cd7]/40 via-[#6f1cd7]/20 to-transparent" />
+          <div className="absolute left-0 md:left-12 top-0 w-[1px] h-full bg-gradient-to-b from-[#6f1cd7]/40 via-[#6f1cd7]/20 to-transparent" />
 
           <div className="space-y-12">
             {[
@@ -79,7 +79,7 @@ const Experience = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="relative pl-16 md:pl-24"
+                className="relative pl-6 md:pl-24"
               >
                 <motion.div
                   className="absolute left-0 top-3 transform -translate-x-1/2"
