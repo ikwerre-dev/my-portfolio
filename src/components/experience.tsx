@@ -1,7 +1,7 @@
 'use client'
 
 import Resume from "./resume";
-const resumeUrl = '/pdf/resume.pdf'; 
+const resumeUrl = '/pdf/resume.pdf';
 import { motion } from "framer-motion";
 
 const Experience = () => {
@@ -28,6 +28,18 @@ const Experience = () => {
 
           <div className="space-y-12">
             {[
+              {
+                title: "Frontend Developer",
+                company: "Steadfast International",
+                location: "Lagos, Nigeria",
+                period: "2025 - Present",
+                description: [
+                  "Leading the development of a Progressive Web App (PWA) eCommerce platform, Admin Panel, and Affiliate Marketing Website",
+                  "Implementing responsive and mobile-first design principles with modern frontend technologies",
+                  "Collaborating with the product team to deliver high-performance web applications with focus on user experience",
+                  "Building scalable frontend architecture for multiple interconnected platforms"
+                ]
+              },
               {
                 title: "Fullstack Developer & CEO",
                 company: "Pxxl Space",
