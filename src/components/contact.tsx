@@ -50,7 +50,7 @@ const Contact = () => {
           </div>
           <a
             className={`text-[#FFFFFF99] font-medium text-base md:text-[20px] md:leading-[30px]`}
-            href="mailto:victoluolatunji@gmail.com"
+            href="mailto:codewithhonour@gmail.com"
           >
             codewithhonour@gmail.com
           </a>

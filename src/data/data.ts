@@ -1,5 +1,10 @@
 export const projects = [
   {
+    name: "EHR Clothing Brand",
+    desc: "EHR Clothing Brand is a leading provider of high-quality EHR clothing products, designed to meet the unique needs of healthcare professionals.",
+    lang: "Next.js + Node.js + TailwindCSS",
+    link: "https://www.ehrclothing.store/",
+  }, {
     name: "Zgnis Analytics",
     desc: "Advanced waste management analytics platform with real-time monitoring and data visualization",
     lang: "Next.js + Node.js + TailwindCSS",
