@@ -29,6 +29,7 @@ const Resume = ({ pdfUrl, fileName, buttonText }: ResumeProps) => {
       console.error("Error downloading PDF:", errorMessage);
     }
   };
+  
   return (
     <div className="transition-all duration-300 active:scale-[0.96] max-w-[200px] mx-auto md:mx-0 flex justify-center lg:flex lg:justify-start">
       <span
