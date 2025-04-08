@@ -67,7 +67,7 @@ const Hero = () => {
               >
                 <IgIcon
                   fill={`#6f1cd7`}
-                  className={`w-[30px] h-[30px] rounded-full border-[#6f1cd7] border-solid border-[2px] p-0.5  transition-all duration-500 hover:bg-white`}
+                  className={`w-[30px] h-[30px] rounded-full     border-[#6f1cd7] border-solid border-[2px] p-0.5  transition-all duration-500 hover:bg-white`}
                 />
               </motion.a>
               <motion.a
